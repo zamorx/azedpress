@@ -2,7 +2,7 @@
 session_start();
 /* DATABASE CONFIGURATION */
 define('DB_SERVER', 'www.azedpress.com');
-define('DB_USERNAME', 'azedpress_user');
+define('DB_USERNAME', 'azedpres_user');
 define('DB_PASSWORD', 'Azedpress@2022');
 define('DB_DATABASE', 'azedpres_trackingdb');
 define("BASE_URL", "http://azedpress.local/tracking/");
