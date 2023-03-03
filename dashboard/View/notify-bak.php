@@ -2,7 +2,6 @@
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load composer's autoloader
@@ -12,17 +11,15 @@ require 'phpmailer/SMTP.php';
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
-
-//Server settings
-$mail->SMTPDebug = 0;                                       //Enable verbose debug output
-$mail->isSMTP();                                            //Send using SMTP
-$mail->Host       = 'smtp.office365.com';                   //Set the SMTP server to send through
-$mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-$mail->Username   = 'noreply@azedpress.com';                //SMTP username
-$mail->Password   = 'coghy0-rijnIr-binnac';                 //SMTP password
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable implicit TLS encryption
-$mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
+    //Server settings
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp.office365.com';                   // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'noreply@azedpress.com';            // SMTP username
+    $mail->Password = 'domnaz-nukqe1-joMzom';             // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 587;                                    // TCP port to connect to
 
     $mail->CharSet = 'UTF-8';
     $mail->Encoding = 'base64';
@@ -31,27 +28,23 @@ $mail->Port       = 587;                                    //TCP port to connec
     $nombre = $alm->name;
 
     //Recipients
-
     $mail->setFrom('noreply@azedpress.com', 'Azedpress.com');
-    $mail->addAddress($correo, $nombre);     //Add a recipient
+    $mail->addAddress($correo, $nombre);     // Add a recipient
 
 
     //Content
-
-    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Tracking #AZ'.$alm->trackingid.' ha llegado';
-    $mail->Body    = '<!DOCTYPE html>
-    <html lang="es">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+    $mail->Body    = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="x-apple-disable-message-reformatting">
+        <title>Azedpres.com</title>
         <style>
             body {
                 font-size: medium;
-                margin: 0 !important;
+                margin: 0 auto !important;
                 padding: 0;
                 background-color: #fff;
             }
@@ -178,21 +171,20 @@ $mail->Port       = 587;                                    //TCP port to connec
             <div class="noreply">Este mensaje ha sido enviado desde una dirección de correo electrónico que no puede recibir
                 mensajes. Por favor, no responda a este.</div>
             <div class="copy">
-                <p>Copyright © 2022 Azedpress.com. Todos los derechos reservados.
+                <p>Copyright © 2023 Azedpress.com. Todos los derechos reservados.
                     </br>24 Avenida Suroeste, Managua, Nicaragua 13011.</p>
             </div>
         </div>
     </body>
     
     </html>';
-
-    
-
+    $mail->AltBody = 'Hola <strong>'.$nombre.'</strong>,</br></br>Tu paquete <strong>'.$alm->description.'</strong> ha llegado y está listo para ser entregado.</br></br>Tipo de Servicio:  <strong>'.$alm->servicename.'</strong></br>Peso: <strong>'.$alm->weight.' <?php if($alm->weight == 1): ?>aja<?php if($alm->weight > 1): ?>pound<?php endif ?><?php endif ?></strong>';
 
     $mail->send();
     echo '';
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    echo 'El mensaje no pudo ser enviado.';
+    echo 'Error de servidor de correo: ' . $mail->ErrorInfo;
 }
 
 ?>
