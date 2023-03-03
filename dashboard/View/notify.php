@@ -178,7 +178,7 @@ $mail->Port       = 587;                                    //TCP port to connec
             <div class="noreply">Este mensaje ha sido enviado desde una dirección de correo electrónico que no puede recibir
                 mensajes. Por favor, no responda a este.</div>
             <div class="copy">
-                <p>Copyright © 2022 Azedpress.com. Todos los derechos reservados.
+                <p>Copyright © 2023 Azedpress.com. Todos los derechos reservados.
                     </br>24 Avenida Suroeste, Managua, Nicaragua 13011.</p>
             </div>
         </div>
