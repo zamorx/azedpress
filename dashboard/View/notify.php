@@ -16,10 +16,10 @@ try {
 //Server settings
 $mail->SMTPDebug = 0;                                       //Enable verbose debug output
 $mail->isSMTP();                                            //Send using SMTP
-$mail->Host       = 'smtp.office365.com';                   //Set the SMTP server to send through
+$mail->Host       = 'mail.azedpress.com';                   //Set the SMTP server to send through
 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
 $mail->Username   = 'noreply@azedpress.com';                //SMTP username
-$mail->Password   = '';                 //SMTP password
+$mail->Password   = '21nK>Gn1';                 //SMTP password
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable implicit TLS encryption
 $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -54,6 +54,7 @@ $mail->Port       = 587;                                    //TCP port to connec
                 margin: 0 !important;
                 padding: 0;
                 background-color: #fff;
+                /* background-color: #f7f7f7; */
             }
     
             .logo {
@@ -94,7 +95,7 @@ $mail->Port       = 587;                                    //TCP port to connec
                 body {
                     margin: 0;
                     padding: 0;
-                    background-color: #f7f7f7 !important;
+                    background-color: #fff !important;
                 }
             }
     
@@ -102,7 +103,7 @@ $mail->Port       = 587;                                    //TCP port to connec
                 body {
                     margin: 0;
                     padding: 0;
-                    background-color: #f7f7f7 !important;
+                    background-color: #fff !important;
                 }
             }
     
@@ -110,7 +111,7 @@ $mail->Port       = 587;                                    //TCP port to connec
                 body {
                     margin: 0;
                     padding: 0;
-                    background-color: #f7f7f7 !important;
+                    background-color: #fff !important;
                 }
             }
     
@@ -118,7 +119,7 @@ $mail->Port       = 587;                                    //TCP port to connec
                 body {
                     margin: 0;
                     padding: 0;
-                    background-color: #f7f7f7 !important;
+                    background-color: #fff !important;
                 }
             }
     
@@ -126,7 +127,7 @@ $mail->Port       = 587;                                    //TCP port to connec
                 body {
                     margin: 0;
                     padding: 0;
-                    background-color: #f7f7f7 !important;
+                    background-color: #fff !important;
                 }
             }
     
