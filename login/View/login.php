@@ -1,36 +1,7 @@
-<?php
-include("config.php");
-include('class/userClass.php');
-$userClass = new userClass();
-
-$errorMsgReg = '';
-/* Signup Form */
-if (!empty($_POST['signupSubmit'])) {
-  $username = $_POST['usernameReg'];
-  $email = $_POST['emailReg'];
-  $password = $_POST['passwordReg'];
-  $name = $_POST['nameReg'];
-  /* Regular expression check */
-  $username_check = preg_match('~^[A-Za-z0-9_]{3,20}$~i', $username);
-  $email_check = preg_match('~^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.([a-zA-Z]{2,4})$~i', $email);
-  $password_check = preg_match('~^[A-Za-z0-9!@#$%^&*()_]{6,20}$~i', $password);
-
-  if ($username_check && $email_check && $password_check && strlen(trim($name)) > 0) {
-    $uid = $userClass->userRegistration($username, $password, $email, $name);
-    if ($uid) {
-      $url = BASE_URL . 'index.php';
-      header("Location: $url"); // Page redirecting to home.php 
-    } else {
-      $errorMsgReg = "Username or Email already exists.";
-    }
-  }
-}
-?>
-
-<head><meta charset="utf-8">
-  
+<head>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ICON S.A. - Support System</title>
+  <title>AZEDPRESS - Tracking System</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="all,follow">
@@ -63,33 +34,25 @@ if (!empty($_POST['signupSubmit'])) {
     <div class="container">
       <div class="form-outer text-center d-flex align-items-center">
         <div class="form-inner">
-          <div class="logo text-uppercase"><span>Registro</span><strong class="text-primary">Usuario</strong></div>
+          <div class="logo text-uppercase"><strong class="text-primary">azedpress</strong></br><span>tracking system</span></div>
           <p></p>
-          <form method="post" action="" name="signup" class="text-left form-validate">
+          <form method="post" action="" name="login" class="text-left form-validate">
             <div class="form-group-material">
-              <input id="register-name" type="text" name="nameReg" autocomplete="off" required data-msg="Please enter your username" class="input-material">
-              <label for="register-name" class="label-material">Nombre Completo</label>
-            </div>
-            <div class="form-group-material">
-              <input id="register-username" type="text" name="usernameReg" autocomplete="off" required data-msg="Please enter your username" class="input-material">
-              <label for="register-username" class="label-material">Usuario</label>
+              <input id="login-username" type="text" name="usernameEmail" autocomplete="off" required data-msg="Escribe tu usuario" class="input-material">
+              <label for="login-username" class="label-material">Usuario</label>
             </div>
             <div class="form-group-material">
-              <input id="register-email" type="text" name="emailReg" autocomplete="off" required data-msg="Please enter a valid email address" class="input-material">
-              <label for="register-email" class="label-material">Correo electrónico</label>
+              <input id="login-password" type="password" name="password" autocomplete="off" required data-msg="Escribe tu contraseña" class="input-material">
+              <label for="login-password" class="label-material">Contraseña</label>
             </div>
-            <div class="form-group-material">
-              <input id="register-password" type="password" name="passwordReg" autocomplete="off" required data-msg="Please enter your password" class="input-material">
-              <label for="register-password" class="label-material">Contraseña </label>
+            <div class="errorMsg"></div>
+            <div class="form-group text-center"><input type="submit" name="loginSubmit" value="Login" class="btn btn-primary">
+              <!-- This should be submit button but I replaced it with <a> for demo purposes-->
             </div>
-            <div class="errorMsg"><?php echo $errorMsgReg; ?></div>
-            <div class="form-group text-center">
-              <input type="submit" class="btn btn-primary" name="signupSubmit" value="Signup">
-            </div>
-          </form><small>Ya tiene una cuenta? </small><a href="index.php" class="signup">Login</a>
+          </form><!-- <a href="#" class="forgot-pass">Forgot Password?</a> <small>Aún no se ha registrado? </small><a href="register.php" class="signup">Hágalo aquí.</a>-->
         </div>
         <div class="copyrights text-center">
-          <p>Desarrollado por <a href="https://www.iconplus..net" class="external">ICON S.A.</a></p>
+          <p>Desarrollado por <a href="https://www.iconplus.net" class="external">AZEDPRESS</a></p>
           <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
         </div>
       </div>

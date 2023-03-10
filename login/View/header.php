@@ -1,7 +1,7 @@
 <?php
-    require_once('../tracking/config.php');
-    require_once('../tracking/session.php');
-    $userDetails = $userClass->userDetails($session_uid);
+   // require_once('../tracking/config.php');
+   // require_once('../tracking/session.php');
+   // $userDetails = $userClass->userDetails($session_uid);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -51,8 +51,8 @@
                 <!-- Sidebar Header    -->
                 <div class="sidenav-header d-flex align-items-center justify-content-center">
                     <!-- User Info-->
-                    <div class="sidenav-header-inner text-center"><img src="assets/img/<?php echo $userDetails->username; ?>.jpg" alt="<?php echo $userDetails->name; ?>" class="img-fluid rounded-circle">
-                        <h2 class="h5"><?php echo $userDetails->name; ?></h2><span><?php echo $userDetails->namerol; ?></span>
+                    <div class="sidenav-header-inner text-center"><img src="assets/img/czamora.jpg" alt="Carlos Zamora" class="img-fluid rounded-circle">
+                        <h2 class="h5">Carlos Zamora</h2><span>Administrator</span>
                     </div>
                     <!-- Small Brand information, appears on minimized sidebar-->
                     <div class="sidenav-header-logo"><a href="index.php" class="brand-small text-center"> <strong>A</strong><strong class="text-primary">Z</strong></a></div>
@@ -61,17 +61,17 @@
                 <div class="main-menu">
                     <h5 class="sidenav-heading">Main</h5>
                     <ul id="side-main-menu" class="side-menu list-unstyled">
-                    <?php if($userDetails->idrol == 1 ) : ?>
+                    
                             <li class=""><a href="?c=home"> <i class="icon-home"></i>Dashboard</a></li>
-                        <?php endif; ?>
-                        <?php if($userDetails->idrol == 2 ) : ?>
+                        
+                        
                         <li class=""><a href="index.php"> <i class="icon-home"></i>Home</a></li>
-                        <?php endif; ?>
+                       
                         <li class=""><a href="?c=Trackings"> <i class="icon-list"></i>Trackings</a></li>
                         
-                        <?php if($userDetails->idrol == 1 ) : ?>
+                        
                             <li class=""><a href="?c=Logins"> <i class="icon-user"></i>Clientes</a></li>
-                        <?php endif; ?>
+                        
                         
                     </ul>
                 </div>
@@ -95,7 +95,7 @@
                                     </ul>
                                 </li>
                                 <!-- Log out-->
-                                <li class="nav-item"><a href="<?php echo BASE_URL; ?>logout.php" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+                                <li class="nav-item"><a href="?c=login" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
                             </ul>
                         </div>
                     </div>

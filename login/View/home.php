@@ -1,5 +1,3 @@
-<?php require_once('dashboard.php'); ?>
-
 <!-- Counts Section -->
 <section class="dashboard-counts section-padding">
   <div class="container-fluid">
@@ -9,7 +7,7 @@
         <div class="wrapper count-title d-flex">
           <div class="icon"><i class="fa fa-users"></i></div>
           <div class="name"><strong class="text-uppercase">Clientes</strong><span>Registrados</span>
-            <div class="count-number"><?php echo $client ?></div>
+            <div class="count-number"></div>
           </div>
         </div>
       </div>
@@ -18,7 +16,7 @@
         <div class="wrapper count-title d-flex">
           <div class="icon"><i class="fa fa-plane"></i></div>
           <div class="name"><strong class="text-uppercase">Aéreos</strong><span>Pendientes</span>
-            <div class="count-number"><?php echo $airpending ?></div>
+            <div class="count-number"></div>
           </div>
         </div>
       </div>
@@ -27,7 +25,7 @@
         <div class="wrapper count-title d-flex">
           <div class="icon"><i class="fa fa-ship"></i></div>
           <div class="name"><strong class="text-uppercase">Marítimos</strong><span>Pendientes</span>
-            <div class="count-number"><?php echo $marpending ?></div>
+            <div class="count-number"></div>
           </div>
         </div>
       </div>
@@ -36,7 +34,7 @@
         <div class="wrapper count-title d-flex">
           <div class="icon"><i class="fa fa-plane"></i></div>
           <div class="name"><strong class="text-uppercase">Aéreos</strong><span>Entregados</span>
-            <div class="count-number"><?php echo $airdelivered ?></div>
+            <div class="count-number"></div>
           </div>
         </div>
       </div>
@@ -45,7 +43,7 @@
         <div class="wrapper count-title d-flex">
           <div class="icon"><i class="fa fa-ship"></i></div>
           <div class="name"><strong class="text-uppercase">Maritimos</strong><span>Entregados</span>
-            <div class="count-number"><?php echo $mardelivered ?></div>
+            <div class="count-number"></div>
           </div>
         </div>
       </div>
@@ -54,7 +52,7 @@
         <div class="wrapper count-title d-flex">
           <div class="icon"><i class="fa fa-usd"></i></div>
           <div class="name"><strong class="text-uppercase">Utilidad</strong><span>Total</span>
-            <div class="count-number"><?php echo $totalearned ?></div>
+            <div class="count-number"></div>
           </div>
         </div>
       </div>
@@ -121,7 +119,7 @@
         <!-- Income-->
         <div class="card income text-center">
           <div class="icon"><i class="icon-line-chart"></i></div>
-          <div class="number">$ <?php echo $totalincome ?></div><strong class="text-primary">Ingreso Total</strong>
+          <div class="number"></div><strong class="text-primary">Ingreso Total</strong>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
         </div>
       </div>
@@ -169,24 +167,7 @@
           <div id="updates-box" role="tabpanel" class="collapse show">
             <ul class="news list-unstyled">
               <!-- Item-->
-              <?php foreach ($this->model->trackingList() as $r) : ?>
-                <? if ($r->statusid == 2) : ?>
-                  <li class="d-flex justify-content-between">
-                    <div class="left-col d-flex">
-                      <div class="icon"><i class="icon-mail"></i></div>
-                      <div class="title"><strong><?php echo $r->name ?></strong>
-                        <p>Paquete entregado por <?php echo $r->couriername ?></p>
-                      </div>
-                    </div>
-                    <div class="right-col text-right">
-                      <div class="update-date">
-                        <?php $origDate = "$r->whdate"; $newDate = date("d", strtotime($origDate)); echo $newDate;?><span class="month">
-                        <?php $origDate = "$r->whdate"; $newDate = date("M", strtotime($origDate)); echo $newDate;?></span>
-                      </div>
-                    </div>
-                  </li>
-                <? endif ?>
-              <?php endforeach; ?>
+              
             </ul>
           </div>
         </div>
@@ -201,21 +182,7 @@
           <div id="activities-box" role="tabpanel" class="collapse show">
             <ul class="activities list-unstyled">
               <!-- Item-->
-              <?php foreach ($this->model->trackingList() as $r) : ?>
-                <? if ($r->statusid == 3) : ?>
-              <li>
-                <div class="row">
-                  <div class="col-4 date-holder text-right">
-                    <div class="icon"><i class="icon-clock"></i></div>
-                    <div class="date"><span><?php echo $r->servicename ?></span><span class="text-info"> <?php $origDate = "$r->whdate"; $newDate = date("d M", strtotime($origDate)); echo $newDate;?></span></div>
-                  </div>
-                  <div class="col-8 content"><strong><?php echo $r->name ?></strong>
-                    <p><?php echo $r->description ?></p>
-                  </div>
-                </div>
-              </li>
-              <?php endif ?>
-              <?php endforeach; ?> 
+              
               <!-- Item-->
             </ul>
           </div>
@@ -228,15 +195,7 @@
             <h2 class="h5 display"><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box">Listo para entrega </a></h2>
             <div class="right-column">
               <div class="badge badge-primary">
-                <?php if($entrega == 1):?>
-                  <?php echo $entrega ?> paquete
-                    <? endif ?>
-                    <?php if($entrega > 1):?>
-                  <?php echo $entrega ?> paquetes
-                    <? endif ?>
-                    <?php if($entrega < 1):?>
-                  <?php echo "Ningún paquete" ?>
-                    <? endif ?>
+               
                   </div><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box"><i class="fa fa-angle-down"></i></a>
             </div>
           </div>
@@ -244,36 +203,18 @@
             <div class="feed-box">
               <ul class="feed-elements list-unstyled">
                 <!-- List-->
-                <?php foreach ($this->model->trackingList() as $r) : ?>
-                  <? if ($r->statusid == 5) : ?>
-                    <? if ($r->serviceid == 1) : ?>
+                
                 <li class="clearfix">
                   <div class="feed d-flex justify-content-between">
-                    <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/<?php echo $r->username ?>.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                      <div class="content"><strong><?php echo $r->name ?></strong>
-                      <!--<small><?php echo $r->description ?></small>-->
-                        <div class="full-date"><small><?php echo $r->servicename ?> - AZ<?php echo $r->trackingid ?></small></div>
+                    <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/czamora.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                      <div class="content"><strong></strong>
+                      <!--<small></small>-->
+                        <div class="full-date"><small></small></div>
                       </div>
                     </div>
-                    <div class="date"><small>$<?php echo $r->weight*8 ?></small></div>
+                    <div class="date"><small></small></div>
                   </div>
                 </li>
-
-                <? elseif ($r->serviceid == 2) : ?>
-                <li class="clearfix">
-                  <div class="feed d-flex justify-content-between">
-                    <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/<?php echo $r->username ?>.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                      <div class="content"><strong><?php echo $r->name ?></strong>
-                      <!--<small><?php echo $r->description ?></small>-->
-                        <div class="full-date"><small><?php echo $r->servicename ?> - AZ<?php echo $r->trackingid ?></small></div>
-                      </div>
-                    </div>
-                    <div class="date"><small>$<?php echo $r->weight*3 ?></small></div>
-                  </div>
-                </li>
-                <? endif ?>
-                <? endif ?>
-                <?php endforeach; ?> 
               </ul>
             </div>
           </div>
