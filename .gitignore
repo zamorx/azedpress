@@ -8,3 +8,4 @@ dashboard/View/notify-O365.php
 dashboard/Model/config.php
 dashboard/Model/config-local.php
 dashboard/Model/dbconn.php
+dashboard/.DS_Store

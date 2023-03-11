@@ -20,6 +20,9 @@
                     </div>
                     <div class="card-body">
                         <p>Complete el formulario con los datos solicitados.</p>
+
+                        <!-- BEGIN AGREGAR TRACKING ADMINISTRADOR -->
+                        <?php if($userDetails->idrol == 1 ) : ?> 
                         <form id="test" action="?c=Trackings&a=Guardar" method="post" enctype="multipart/form-data">
                             <input type="hidden" name="trackingid" value="<?php echo $alm->trackingid; ?>" />
                             <div class="form-group">
@@ -87,6 +90,65 @@
                                 <button class="btn btn-success">Guardar</button>
                             </div>
                         </form>
+                        <?php endif; ?>
+                        <!-- END AGREGAR TRACKING ADMINISTRADOR -->
+
+
+
+                        <!-- BEGIN PREALERTAR PAQUETE CLIENTE -->
+                        <?php if($userDetails->idrol == 2 ) : ?> 
+                        <form id="test" action="?c=Trackings&a=Guardar" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="trackingid" value="<?php echo $alm->trackingid; ?>" />
+                            <div hidden="hidden" class="form-group">
+
+                                <select id="uid" name="uid" value="<?php echo $alm->name; ?>" class="form-control">
+                                    <option value="<?php echo $userDetails->uid; ?>"><?php echo $userDetails->name; ?></option>
+                                </select>
+                            
+
+                            </div>
+                            <div class="form-group">
+                                <label>Número de tracking</label>
+                                <input type="text" name="couriertracking" value="<?php echo $alm->couriertracking; ?>" class="form-control" placeholder="Escriba el número de tracking" data-validacion-tipo="requerido|min:8" />
+                            </div>
+
+                            <div class="form-group">
+                                <input type="hidden" name="estdate" value="<?php echo date('Y/m/d', strtotime('+7 days')); ?>" class="form-control" placeholder="Fecha estimada de entrega" data-validacion-tipo="requerido|date" />
+                            </div>
+
+                            <div hidden="hidden" class="form-group">
+                                <select id="courierid" name="courierid" value="<?php echo $alm->couriername; ?>" class="form-control">
+                                        <option value="<?php echo "6"?>"><?php echo "None"; ?></option>
+                                </select>
+                            </div>
+                        
+                            <div class="form-group">
+                                <label>Descripción del paquete</label>
+                                <input type="text" name="description" value="<?php echo $alm->description; ?>"class="form-control" placeholder="Escriba la descripción de su paquete" data-validacion-tipo="requerido|min:8" />
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tipo de Servicio</label>
+                                <select id="serviceid" name="serviceid" value="<?php echo $alm->servicename; ?>" class="form-control">
+                                    <option value="<?php echo $alm->serviceid; ?>"><?php echo $alm->trackingid != null ? $alm->servicename : 'Tipo de Servicio'; ?></option>
+                                    <?php foreach ($this->model->ListService() as $r) : ?>
+                                        <option value="<?php echo $r->serviceid?>"><?php echo $r->servicename; ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="hidden" name="weight" value="Undefined" class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|min:8" />
+                            </div>
+                            <div class="text-right">
+                                <a class="btn btn-danger" href="?c=Trackings">Cancel</a>
+                                <button class="btn btn-success">Guardar</button>
+                            </div>
+                        </form>
+
+                        <?php endif; ?>
+
+                        <!-- END PREALERTAR PAQUETE CLIENTE -->
 
                     </div>
                 </div>

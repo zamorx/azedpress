@@ -16,7 +16,7 @@
                     <?php if($userDetails->idrol == 1) : ?>
                         <a class="btn btn-primary" href="?c=Trackings&a=Crud">Agregar Seguimiento</a>
                     <?php elseif($userDetails->idrol == 2) : ?>
-                        <a class="btn btn-primary" href="#">Prealertar Paquete</a>
+                        <a class="btn btn-primary" href="?c=Trackings&a=Crud">Prealertar Paquete</a>
                     <?php endif; ?>
                 </div>
                 </header>
