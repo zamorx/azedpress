@@ -13,43 +13,37 @@
         <header>
             <h1 class="h3 display">Clientes</h1>
             <div class="well well-sm text-right">
-                <?php if($userDetails->idrol == 1) : ?>
+                <?php if ($userDetails->idrol == 1) : ?>
                     <a class="btn btn-primary" href="?c=Logins&a=Crud">Nuevo Cliente</a>
-                <?php  elseif($userDetails->idrol == 2) : ?>
+                <?php elseif ($userDetails->idrol == 2) : ?>
                     <a class="btn btn-primary" href="?c=Logins&a=Crud">Nuevo Cliente</a>
                 <?php endif; ?>
             </div>
         </header>
 
         <section class="mt-30px mb-30px">
-            
-            
-                
-                 <div class="row">
-      
+            <div class="row">
+                <?php foreach ($this->model->Listar() as $r) : ?>
+                    <div class="col-lg-3 col-md-12">
+                        <div class="card radius-15">
+                            <div class="card-body text-center">
+                                <div class="p-4 border radius-15">
+                                    <img src="assets/img/<?php echo $r->username; ?>.jpg" width="110" height="110" class="rounded-circle shadow" alt="">
+                                    <h2 class="mb-0 mt-5"><a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>"><?php echo $r->name; ?></a></h5>
+                                        <p class="mb-3"><?php echo $r->namerol; ?></p>
 
-        <?php foreach ($this->model->Listar() as $r) : ?>
-            <div class="col-lg-3 col-md-12">
-						<div class="card radius-15">
-							<div class="card-body text-center">
-								<div class="p-4 border radius-15">
-									<img src="assets/img/<?php echo $r->username; ?>.jpg" width="110" height="110" class="rounded-circle shadow" alt="">
-									<h2 class="mb-0 mt-5"><a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>"><?php echo $r->name; ?></a></h5>
-									<p class="mb-3"><?php echo $r->namerol; ?></p>
+                                        <div class="list-inline contacts-social mt-3 mb-3">
+                                            <a href="mailto:<?php echo $r->email; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bxl-twitter"></i>Contact Me</a>
+                                        </div>
 
-                                    <div class="list-inline contacts-social mt-3 mb-3">
-										<a href="mailto:<?php echo $r->email; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bxl-twitter"></i>Contact Me</a>
-									</div>
-									
-									<div class="d-grid"> <a href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>" class="btn btn-outline-primary radius-15">Change Password</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-        <?php endforeach; ?>
+                                        <div class="d-grid"> <a href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>" class="btn btn-outline-primary radius-15">Change Password</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-       
         </section>
 
         <div hidden="hidden" class="row">
@@ -79,12 +73,12 @@
                                             <td><?php echo $r->namerol; ?></td>
                                             <td><?php echo $r->phone; ?></td>
                                             <td>
-                                                <?php if($userDetails->idrol == 1) : ?>
+                                                <?php if ($userDetails->idrol == 1) : ?>
                                                     <i class="glyphicon glyphicon-remove"><a class="text-danger" href="?c=Logins&a=Eliminar&uid=<?php echo $r->uid; ?>"> Eliminar</a></i>
                                                 <?php endif; ?>
                                             </td>
                                             <td>
-                                                <?php if($userDetails->idrol == 1) : ?>
+                                                <?php if ($userDetails->idrol == 1) : ?>
                                                     <i class="glyphicon glyphicon-remove"><a class="text-info" href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>"> Cambiar password</a></i>
                                                 <?php endif; ?>
                                             </td>
