@@ -21,7 +21,38 @@
             </div>
         </header>
 
-        <div class="row">
+        <section class="mt-30px mb-30px">
+            
+            <div class="container-fluid">
+                
+                 <div class="row">
+      
+
+        <?php foreach ($this->model->Listar() as $r) : ?>
+            <div class="col-lg-4 col-md-12">
+						<div class="card radius-15">
+							<div class="card-body text-center">
+								<div class="p-4 border radius-15">
+									<img src="assets/img/<?php echo $r->username; ?>.jpg" width="110" height="110" class="rounded-circle shadow" alt="">
+									<h2 class="mb-0 mt-5"><a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>"><?php echo $r->name; ?></a></h5>
+									<p class="mb-3"><?php echo $r->namerol; ?></p>
+
+                                    <div class="list-inline contacts-social mt-3 mb-3">
+										<a href="mailto:<?php echo $r->email; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bxl-twitter"></i>Contact Me</a>
+									</div>
+									
+									<div class="d-grid"> <a href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>" class="btn btn-outline-primary radius-15">Change Password</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+        <?php endforeach; ?>
+            </div>
+        </div>
+        </section>
+
+        <div hidden="hidden" class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
