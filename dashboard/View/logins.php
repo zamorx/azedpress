@@ -23,13 +23,13 @@
 
         <section class="mt-30px mb-30px">
             
-            <div class="container-fluid">
+            
                 
                  <div class="row">
       
 
         <?php foreach ($this->model->Listar() as $r) : ?>
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-3 col-md-12">
 						<div class="card radius-15">
 							<div class="card-body text-center">
 								<div class="p-4 border radius-15">
@@ -49,7 +49,7 @@
 					</div>
         <?php endforeach; ?>
             </div>
-        </div>
+       
         </section>
 
         <div hidden="hidden" class="row">
