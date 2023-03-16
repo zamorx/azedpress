@@ -14,9 +14,9 @@
             <h1 class="h3 display">Seguimiento de paquetes</h1>
             <div class="well well-sm text-right">
                 <?php if ($userDetails->idrol == 1) : ?>
-                    <a class="btn btn-primary" href="?c=Trackings&a=Crud">Agregar Seguimiento</a>
+                    <a class="btn btn-primary radius-5 px-4" href="?c=Trackings&a=Crud">Agregar Seguimiento</a>
                 <?php elseif ($userDetails->idrol == 2) : ?>
-                    <a class="btn btn-primary" href="?c=Trackings&a=Crud">Prealertar Paquete</a>
+                    <a class="btn btn-primary radius-5 px-4" href="?c=Trackings&a=Crud">Prealertar Paquete</a>
                 <?php endif; ?>
             </div>
         </header>
@@ -220,7 +220,8 @@
 										<th>Tracking ID</th>
 										<th>Estado</th>
 										<th>Servicio</th>
-										<th>Fecha</th>
+										<th>Warehouse</th>
+                                        <th>Delivered</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -234,12 +235,17 @@
 										<td><?php echo $r->whtracking; ?></td>
 										<td><div class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx2 bx2-circle me-12"></i><?php echo $r->statusname; ?></div></td>
 										<td><?php echo $r->servicename; ?></td>
-										<td><?php $newDate = date("F d, Y", strtotime($r->deliverydate));
-                                                        echo $newDate; ?></td>
+										<td><?php $newDate = date("F d, Y", strtotime($r->whdate));
+                                                        echo $newDate; ?>
+                                                        </td>
+                                                        <td><?php $newDate = date("F d, Y", strtotime($r->deliverydate));
+                                                        echo $newDate; ?>
+                                                        </td>
 										
-                                        <?php endif; ?>
-                                        <?php endforeach; ?>
+                                        
 									</tr>
+                                    <?php endif; ?>
+                                        <?php endforeach; ?>
 								</tbody>
 							</table>
 						</div>
