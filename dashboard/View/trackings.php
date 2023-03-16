@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <!-- Page Header-->
         <header>
-            <h1 class="h3 display">Seguimiento de paquetes</h1>
+            <h1 class="h3 display">Sus paquetes</h1>
             <div class="well well-sm text-right">
                 <?php if ($userDetails->idrol == 1) : ?>
                     <a class="btn btn-primary radius-5 px-4" href="?c=Trackings&a=Crud">Agregar Seguimiento</a>
@@ -20,34 +20,40 @@
                 <?php endif; ?>
             </div>
         </header>
-        <!-- TABLAS CLIENTES -->
-        <!-- BEGIN TABALA DE ENVIOS EN CAMINO  -->
+        <!-- BEGIN CLIENTS ORDERS -->
+       
         <?php if ($userDetails->idrol == 2) : ?>
 
 
             <?php foreach ($this->model->Listar() as $r) : ?>
                 <?php if ($userDetails->uid == $r->uid) : ?>
-                    <div class="card">
+                    <div class="card radius-5">
                         <div class="card-header">
                             Tracking # AZ<?php echo $r->trackingid; ?>
                         </div>
                         <?php if ($r->statusid < 6) : ?>
                         <div class="card-body">
                             <h5 class="card-title">Entrega estimada <?php $origDate = "$r->estdate"; $newDate = date("F d", strtotime($origDate)); echo $newDate; ?></h5>
-                            <p class="card-text"><?php echo $r->description; ?></p>
+                            
+                            <?php echo $r->description; ?>
+                            <p class="card-text"></p>
                             <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
                         </div>
                         <?php endif; ?>
                         <?php if ($r->statusid == 6) : ?>
                         <div class="card-body">
                             <h5 class="card-title text-success"><?php echo $r->statusname; ?> <?php $origDate = "$r->deliverydate"; $newDate = date("F d, Y", strtotime($origDate)); echo $newDate; ?></h5>
-                            <p class="card-text"><?php echo $r->description; ?></p>
+                            
+                            <?php echo $r->description; ?>
+                            <p class="card-text"></p>
                             <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
                         </div>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
             <?php endforeach; ?>
+
+            <!-- END CLIENTS ORDERS -->
 
             <!-- TABLAS ADMINISTRADOR-->
             <!-- BEGIN TABALA DE ENVIOS EN CAMINO  -->
@@ -147,8 +153,6 @@
                                                     <td><?php $newDate = date("F d, Y", strtotime($r->deliverydate));
                                                         echo $newDate; ?>
                                                     </td>
-
-
                                                 </tr>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
@@ -157,10 +161,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
             </div>
         <?php endif; ?>

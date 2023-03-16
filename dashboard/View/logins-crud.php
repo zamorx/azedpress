@@ -138,11 +138,11 @@
                                             <h5 class="d-flex align-items-center mb-3">Flujo de paqueteria</h5>
                                             <p>Aereos</p>
                                             <div class="progress mb-3 h-5">
-                                                <div class="progress-bar bg-primary w-50" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-success w-50" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <p>Maritimos</p>
                                             <div class="progress mb-3 h-5">
-                                                <div class="progress-bar bg-danger w-50" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-info w-50" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                         </div>
                                     </div>
