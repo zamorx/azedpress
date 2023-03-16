@@ -86,8 +86,8 @@
                                 <input type="text" name="weight" value="<?php echo $alm->weight; ?>"class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|min:8" />
                             </div>
                             <div class="text-right">
-                                <a class="btn btn-danger" href="?c=Trackings">Cancel</a>
-                                <button class="btn btn-success">Guardar</button>
+                                <a class="btn btn-danger radius-5 px-4" href="?c=Trackings">Cancel</a>
+                                <button class="btn btn-primary radius-5 px-4">Guardar</button>
                             </div>
                         </form>
                         <?php endif; ?>
@@ -141,8 +141,8 @@
                                 <input type="hidden" name="weight" value="Undefined" class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|min:8" />
                             </div>
                             <div class="text-right">
-                                <a class="btn btn-danger" href="?c=Trackings">Cancel</a>
-                                <button class="btn btn-success">Guardar</button>
+                                <a class="btn btn-danger radius-5 px-4" href="?c=Trackings">Cancel</a>
+                                <button class="btn btn-primary radius-5 px-4">Guardar</button>
                             </div>
                         </form>
 

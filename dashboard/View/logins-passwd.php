@@ -33,8 +33,8 @@
                             </div>
                         
                             <div class="text-right">
-                                <a class="btn btn-danger" href="?c=Logins">Cancel</a>
-                                <button class="btn btn-success">Guardar</button>
+                                <a class="btn btn-danger radius-5 px-4" href="?c=Logins">Cancel</a>
+                                <button class="btn btn-primary radius-5 px-4">Guardar</button>
                             </div>
                         </form>
                     </div>

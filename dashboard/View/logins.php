@@ -14,9 +14,9 @@
             <h1 class="h3 display">Clientes</h1>
             <div class="well well-sm text-right">
                 <?php if ($userDetails->idrol == 1) : ?>
-                    <a class="btn btn-primary" href="?c=Logins&a=Crud">Nuevo Cliente</a>
+                    <a class="btn btn-primary radius-5 px-4" href="?c=Logins&a=Crud">Nuevo Cliente</a>
                 <?php elseif ($userDetails->idrol == 2) : ?>
-                    <a class="btn btn-primary" href="?c=Logins&a=Crud">Nuevo Cliente</a>
+                    <a class="btn btn-primary radius-5 px-4" href="?c=Logins&a=Crud">Nuevo Cliente</a>
                 <?php endif; ?>
             </div>
         </header>
@@ -34,7 +34,7 @@
                                         <div class="list-inline contacts-social mt-3 mb-3">
                                             <a href="mailto:<?php echo $r->email; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bxl-twitter"></i>Contact Me</a>
                                         </div>
-                                        <div class="d-grid"> <a href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>" class="btn btn-outline-primary radius-15">Change Password</a>
+                                        <div class="d-grid"> <a href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>" class="btn btn-outline-primary radius-5 px-4">Change Password</a>
                                         </div>
                                 </div>
                             </div>

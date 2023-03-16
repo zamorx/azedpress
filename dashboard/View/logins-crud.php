@@ -27,8 +27,8 @@
                                             <h1><?php echo $alm->uid != null ? $alm->name : 'Nuevo Registro'; ?></h1>
                                             <p class="text-secondary mb-1"><?php echo $alm->namerol; ?></p>
                                             <p class="text-muted font-size-sm">Nicaragua</p>
-                                            <button class="btn btn-primary">Follow</button>
-                                            <button class="btn btn-outline-primary">Message</button>
+                                            <button class="btn btn-primary radius-5 px-4">Follow</button>
+                                            <button class="btn btn-outline-primary radius-5 px-4">Message</button>
                                         </div>
                                     </div>
                                     <hr class="my-4">
@@ -125,7 +125,7 @@
                                         <div class="row">
                                             <div class="col-sm-3"></div>
                                             <div class="col-sm-9 text-secondary">
-                                                <button class="btn btn-primary px-4">Guardar</button>
+                                                <button class="btn btn-primary radius-5 px-4">Guardar</button>
                                             </div>
                                         </div>
                                     </form>
@@ -199,8 +199,8 @@
                                     <input type="text-box" name="phone" value="<?php echo $alm->phone; ?>" class="form-control" placeholder="Escriba su número de teléfono" data-validacion-tipo="requerido|min:8" />
                                 </div>
                                 <div class="text-right">
-                                    <a class="btn btn-danger" href="?c=Logins">Cancel</a>
-                                    <button class="btn btn-success">Guardar</button>
+                                    <a class="btn btn-danger radius-5 px-4" href="?c=Logins">Cancel</a>
+                                    <button class="btn btn-success radius-5 px-4">Guardar</button>
                                 </div>
                             </form>
                         </div>
