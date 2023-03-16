@@ -2419,8 +2419,8 @@ a {
 }
 
 a:focus, a:hover {
-  color: #ec5512;
-  text-decoration: underline;
+  color: #953106;
+  text-decoration: none;
 }
 
 h1,
@@ -3178,4 +3178,3 @@ a > code {
 .radius-5 {
   border-radius: 0.375rem;
 }
-
