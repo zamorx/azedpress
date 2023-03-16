@@ -68,7 +68,7 @@ if (!empty($_POST['loginSubmit'])) {
               <label for="login-password" class="label-material">Contraseña</label>
             </div>
             <div class="errorMsg"><?php echo $errorMsgLogin; ?></div>
-            <div class="form-group text-center"><input type="submit" name="loginSubmit" value="Login" class="btn btn-primary">
+            <div class="form-group text-center"><input type="submit" name="loginSubmit" value="Login" class="btn btn-primary radius-5 px-4">
               <!-- This should be submit button but I replaced it with <a> for demo purposes-->
             </div>
           </form><!-- <a href="#" class="forgot-pass">Forgot Password?</a> <small>Aún no se ha registrado? </small><a href="register.php" class="signup">Hágalo aquí.</a>-->

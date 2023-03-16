@@ -186,7 +186,7 @@
                                                         echo $newDate; ?></td>
 										<td>
                                             <?php if ($r->statusid < 5) : ?>
-                                            <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-success btn-sm radius-30 px-4">Editar</a>
+                                            <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-primary btn-sm radius-30 px-4">Editar</a>
                                             <?php endif; ?>
                                             <?php if ($r->statusid == 5) : ?>
                                                 <a href="?c=Notify&a=Index&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-info btn-sm radius-30 px-4">Notificar</a>
