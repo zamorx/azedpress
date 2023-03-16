@@ -144,7 +144,7 @@
                                                     </td>
                                                     <td><?php echo $r->whtracking; ?></td>
                                                     <td>
-                                                        <div class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx2 bx2-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                        <div class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                     </td>
                                                     <td><?php echo $r->servicename; ?></td>
                                                     <td><?php $newDate = date("F d, Y", strtotime($r->whdate));
