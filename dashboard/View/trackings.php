@@ -21,7 +21,7 @@
             </div>
         </header>
         <!-- BEGIN CLIENTS ORDERS -->
-       
+
         <?php if ($userDetails->idrol == 2) : ?>
 
 
@@ -32,22 +32,26 @@
                             Tracking # AZ<?php echo $r->trackingid; ?>
                         </div>
                         <?php if ($r->statusid < 6) : ?>
-                        <div class="card-body">
-                            <h5 class="card-title">Entrega estimada <?php $origDate = "$r->estdate"; $newDate = date("F d", strtotime($origDate)); echo $newDate; ?></h5>
-                            <?php echo $r->description; ?>
-                            <p class="card-text"></p>
-                            <?php if ($r->statusid == 6) : ?>
-                            <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
-                            <?php endif; ?>
-                        </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Entrega estimada <?php $origDate = "$r->estdate";
+                                                                        $newDate = date("F d", strtotime($origDate));
+                                                                        echo $newDate; ?></h5>
+                                <?php echo $r->description; ?>
+                                <p class="card-text"></p>
+                                <?php if ($r->statusid == 6) : ?>
+                                    <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
+                                <?php endif; ?>
+                            </div>
                         <?php endif; ?>
                         <?php if ($r->statusid == 6) : ?>
-                        <div class="card-body">
-                            <h5 class="card-title text-success"><?php echo $r->statusname; ?> <?php $origDate = "$r->deliverydate"; $newDate = date("F d, Y", strtotime($origDate)); echo $newDate; ?></h5>
-                            <?php echo $r->description; ?>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
-                        </div>
+                            <div class="card-body">
+                                <h5 class="card-title text-success"><?php echo $r->statusname; ?> <?php $origDate = "$r->deliverydate";
+                                                                                                    $newDate = date("F d, Y", strtotime($origDate));
+                                                                                                    echo $newDate; ?></h5>
+                                <?php echo $r->description; ?>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
+                            </div>
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
@@ -76,7 +80,8 @@
                                             <th>Servicio</th>
                                             <th>Fecha</th>
                                             <th>Acciones</th>
-                                            <th></th>
+                                            <th>
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -89,7 +94,7 @@
                                                     </td>
                                                     <td>AZ<?php echo $r->trackingid; ?></td>
                                                     <td>
-                                                        <div class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                        <div data-toggle="tooltip" data-content="<?php echo $r->couriername; ?>: <?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                     </td>
                                                     <td><?php echo $r->servicename; ?></td>
                                                     <td><?php $newDate = date("F d, Y", strtotime($r->estdate));
@@ -166,3 +171,11 @@
         <?php endif; ?>
     </div>
 </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').popover()
+    });
+</script>
+
