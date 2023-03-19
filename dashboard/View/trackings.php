@@ -94,11 +94,22 @@
                                                     </td>
                                                     <td>AZ<?php echo $r->trackingid; ?></td>
                                                     <td>
+                                                    <?php if ($r->whtracking == null) : ?>
                                                         <div data-toggle="tooltip" data-title="<?php echo $r->couriername; ?>" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                    <?php else : ?>
+                                                        <?php if ($r->whtracking == $r->couriertracking) : ?>
+                                                            <div data-toggle="tooltip" data-title="Atlactic Logistic" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                            <?php else : ?>
+                                                                <div data-toggle="tooltip" data-title="Grupo Garza" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                            <?php endif; ?>
+
+                                                    <?php endif; ?>
                                                     </td>
                                                     <td><?php echo $r->servicename; ?></td>
                                                     <td><?php $newDate = date("F d, Y", strtotime($r->estdate));
-                                                        echo $newDate; ?></td>
+                                                        echo $newDate; ?>
+                                                    </td>
+                                                    
                                                     <td>
                                                         <?php if ($r->statusid < 5) : ?>
                                                             <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-primary btn-sm radius-30 px-4">Editar</a>
