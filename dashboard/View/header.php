@@ -1,8 +1,12 @@
 <?php
-    require_once('../tracking/config.php');
-    require_once('../tracking/session.php');
-    $userDetails = $userClass->userDetails($session_uid);
+require_once('../tracking/config.php');
+require_once('../tracking/session.php');
+$userDetails = $userClass->userDetails($session_uid);
+
+require_once('header-utils.php');
+
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -44,7 +48,6 @@
 <body>
 
 
-    
 
     <body>
         <!-- Side Navbar -->
@@ -63,18 +66,17 @@
                 <div class="main-menu">
                     <h5 class="sidenav-heading">Main</h5>
                     <ul id="side-main-menu" class="side-menu list-unstyled">
-                    <?php if($userDetails->idrol == 1 ) : ?>
+                        <?php if ($userDetails->idrol == 1) : ?>
                             <li class=""><a href="?c=home"> <i class="icon-home"></i>Dashboard</a></li>
                         <?php endif; ?>
-                        <?php if($userDetails->idrol == 2 ) : ?>
-                        <li class=""><a href="index.php"> <i class="icon-home"></i>Home</a></li>
+                        <?php if ($userDetails->idrol == 2) : ?>
+                            <li class=""><a href="index.php"> <i class="icon-home"></i>Home</a></li>
                         <?php endif; ?>
                         <li class=""><a href="?c=Trackings"> <i class="icon-list"></i>Trackings</a></li>
-                        
-                        <?php if($userDetails->idrol == 1 ) : ?>
+
+                        <?php if ($userDetails->idrol == 1) : ?>
                             <li class=""><a href="?c=Logins"> <i class="icon-user"></i>Clientes</a></li>
                         <?php endif; ?>
-                        
                     </ul>
                 </div>
             </div>
@@ -89,21 +91,28 @@
                                     <div class="brand-text d-none d-md-inline-block"><span>System</span><strong class="text-primary"> Dashboard</strong></div>
                                 </a></div>
                             <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                            <?php if ($userDetails->idrol == 1) : ?>
                                 <!-- Messages dropdown-->
-                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-primary">10</span></a>
-                  <ul aria-labelledby="notifications" class="dropdown-menu">
-                  <?php foreach ($this->model->Listar() as $r) : ?>
-                    <?php if ($r->courierid == 6) : ?>
-                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex"> 
-                        <div class="msg-profile"> <img src="assets/img/administrador.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                        <div class="msg-body">
-                          <h3 class="h5"><?php echo $r->name; ?></h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
-                        </div></a></li>
-                        <?php endif; ?>
-                        <?php endforeach; ?>
-                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages</strong></a></li>
-                  </ul>
-                </li>
+                                <?php if ($alertbag == 0) : ?>
+                                <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i></a>
+                                <?php else : ?>
+                                <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-primary"><?php echo $alertbag ?></span></a>
+                                <?php endif; ?>
+                                    <ul aria-labelledby="notifications" class="dropdown-menu">
+                                        <?php foreach ($this->model->Listar() as $r) : ?>
+                                            <?php if ($r->courierid == 7) : ?>
+                                                <li><a rel="nofollow" href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="dropdown-item d-flex">
+                                                        <div class="msg-profile"> <img src="assets/img/<?php echo $r->username; ?>.jpg" alt="<?php echo $r->username; ?>" class="img-fluid rounded-circle"></div>
+                                                        <div class="msg-body">
+                                                            <h3 class="h5"><?php echo $r->name; ?></h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                                                        </div>
+                                                    </a></li>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                        <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages</strong></a></li>
+                                    </ul>
+                                </li>
+                                <?php endif; ?>
                                 <!-- Languages dropdown    -->
                                 <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="assets/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
                                     <ul aria-labelledby="languages" class="dropdown-menu">

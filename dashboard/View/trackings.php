@@ -87,6 +87,7 @@
                                     <tbody>
                                         <?php foreach ($this->model->Listar() as $r) : ?>
                                             <?php if ($r->statusid < 6) : ?>
+                                                <?php if ($r->courierid < 7) : ?>
                                                 <tr>
                                                     <td>
                                                         <?php echo $r->name; ?></h6>
@@ -121,6 +122,7 @@
                                                     <td>
                                                         <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
                                                     </td>
+                                                    <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
                                                 </tr>
