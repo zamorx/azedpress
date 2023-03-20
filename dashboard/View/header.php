@@ -99,7 +99,7 @@ require_once('header-utils.php');
                                 <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-primary"><?php echo $alertbag ?></span></a>
                                 <?php endif; ?>
                                     <ul aria-labelledby="notifications" class="dropdown-menu">
-                                        <?php foreach ($this->model->Listar() as $r) : ?>
+                                        <?php foreach ($this->model->alertList() as $r) : ?>
                                             <?php if ($r->courierid == 7) : ?>
                                                 <li><a rel="nofollow" href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="dropdown-item d-flex">
                                                         <div class="msg-profile"> <img src="assets/img/<?php echo $r->username; ?>.jpg" alt="<?php echo $r->username; ?>" class="img-fluid rounded-circle"></div>

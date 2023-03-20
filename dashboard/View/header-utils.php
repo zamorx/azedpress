@@ -2,7 +2,7 @@
 $alertbag = 0;
 ?>
 
-<?php foreach ($this->model->Listar() as $r) : ?>
+<?php foreach ($this->model->alertList() as $r) : ?>
   
   <?php if ($r->courierid == 7) : ?>
       <?php $alertbag++ ?>
