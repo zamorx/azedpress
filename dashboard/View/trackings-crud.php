@@ -118,7 +118,7 @@
 
                             <div hidden="hidden" class="form-group">
                                 <select id="courierid" name="courierid" value="<?php echo $alm->couriername; ?>" class="form-control">
-                                        <option value="<?php echo "6"?>"><?php echo "None"; ?></option>
+                                        <option value="<?php echo "7"?>"><?php echo "None"; ?></option>
                                 </select>
                             </div>
                         
