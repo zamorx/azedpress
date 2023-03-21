@@ -5,7 +5,7 @@
               <p>AZEDPRESS &copy; <?php echo date("Y"); ?> - Tracking System</p>
             </div>
             <div class="col-sm-6 text-right">
-              <p>Desarrollado por <a href="https://www.iconplus.net" class="external">ICON S.A.</a></p>
+              <p>Desarrollado por <a href="https://www.iconplus.net" class="external">ICON PLUS S.A.</a></p>
               <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions and it helps me to run Bootstrapious. Thank you for understanding :)-->
             </div>
           </div>
