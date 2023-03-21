@@ -63,7 +63,7 @@
                                 <label>Estado de paquete</label>
                                 <select id="statusid" name="statusid" value="<?php echo $alm->statusname; ?>" class="form-control">
                                     <option value="<?php echo $alm->statusid; ?>"><?php echo $alm->statusid != null ? $alm->statusname : 'Seleccione un cliente'; ?></option>
-                                    <option value="4">para Aduanas</option>
+                                    <option value="4">en Aduanas</option>
                                 </select>
                             </div>
                             <input type="hidden" name="whdate" value="<?php echo $alm->whdate; ?>"/>
@@ -115,9 +115,6 @@
         </div>
     </div>
 </section>
-<script>
-    CKEDITOR.replace('issue-description');
-</script>
 
 <script>
     $(document).ready(function() {
