@@ -74,6 +74,10 @@ table {
   color: #666;
 }
 
+.table-hover tbody tr:hover {
+  background-color: #f4f7fa !important;
+}
+
 .btn-xs {
   font-size: 0.7em !important;
   padding: 2px 5px !important;
