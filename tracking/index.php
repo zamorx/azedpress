@@ -74,7 +74,7 @@ if (!empty($_POST['loginSubmit'])) {
           </form><!-- <a href="#" class="forgot-pass">Forgot Password?</a> <small>Aún no se ha registrado? </small><a href="register.php" class="signup">Hágalo aquí.</a>-->
         </div>
         <div class="copyrights text-center">
-          <p>Desarrollado por <a href="https://www.iconplus.net" class="external">AZEDPRESS</a></p>
+          <p>Desarrollado por <a href="https://www.iconplus.net" class="external">ICON PLUS S.A.</a></p>
           <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
         </div>
       </div>
