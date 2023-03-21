@@ -56,7 +56,7 @@ require_once('header-utils.php');
                 <!-- Sidebar Header    -->
                 <div class="sidenav-header d-flex align-items-center justify-content-center">
                     <!-- User Info-->
-                    <div class="sidenav-header-inner text-center"><img src="assets/img/<?php echo $userDetails->username; ?>.jpg" alt="<?php echo $userDetails->name; ?>" class="img-fluid rounded-circle">
+                    <div class="sidenav-header-inner text-center"><a href="index.php"><img src="assets/img/<?php echo $userDetails->username; ?>.jpg" alt="<?php echo $userDetails->name; ?>" class="img-fluid rounded-circle"></a>
                         <h2 class="h5"><?php echo $userDetails->name; ?></h2><span><?php echo $userDetails->namerol; ?></span>
                     </div>
                     <!-- Small Brand information, appears on minimized sidebar-->
@@ -92,7 +92,7 @@ require_once('header-utils.php');
                                 </a></div>
                             <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
                             <?php if ($userDetails->idrol == 1) : ?>
-                                <!-- Messages dropdown-->
+                                <!-- Notifications dropdown-->
                                 <?php if ($alertbag == 0) : ?>
                                 <li class="nav-item dropdown"><a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i></a>
                                 <?php else : ?>
@@ -104,19 +104,23 @@ require_once('header-utils.php');
                                                 <li><a rel="nofollow" href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="dropdown-item d-flex">
                                                         <div class="msg-profile"> <img src="assets/img/<?php echo $r->username; ?>.jpg" alt="<?php echo $r->username; ?>" class="img-fluid rounded-circle"></div>
                                                         <div class="msg-body">
-                                                            <h3 class="h5"><?php echo $r->name; ?></h3><span>sent you a direct message</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                                                            <h3 class="h5"><?php echo $r->name; ?></h3><span>Sent a new prealert</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
                                                         </div>
                                                     </a></li>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
-                                        <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-envelope"></i>Read all messages</strong></a></li>
+                                        <?php if ($alertbag == 0) : ?>
+                                        <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>No notifications</strong></a></li>
+                                        <?php else : ?>
+                                        <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>View all notifications</strong></a></li>
+                                        <?php endif; ?>
                                     </ul>
                                 </li>
                                 <?php endif; ?>
                                 <!-- Languages dropdown    -->
                                 <li class="nav-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="assets/img/flags/16/GB.png" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
                                     <ul aria-labelledby="languages" class="dropdown-menu">
-                                        <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/img/flags/16/DE.png" alt="English" class="mr-2"><span>German</span></a></li>
+                                        <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/img/flags/16/ES.png" alt="Spanish" class="mr-2"><span>Spanish</span></a></li>
                                         <li><a rel="nofollow" href="#" class="dropdown-item"> <img src="assets/img/flags/16/FR.png" alt="English" class="mr-2"><span>French </span></a></li>
                                     </ul>
                                 </li>

@@ -1,7 +1,7 @@
 <div class="breadcrumb-holder">
     <div class="container-fluid">
         <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="?c=Users">Clientes</a></li>
+            <li class="breadcrumb-item"><a href="?c=Logins">Clientes</a></li>
             <li class="breadcrumb-item active"><?php echo $alm->uid != null ? $alm->name  : 'Nuevo Registro'; ?></li>
         </ul>
     </div>

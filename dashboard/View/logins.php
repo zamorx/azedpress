@@ -24,6 +24,7 @@
         <section class="mt-30px mb-30px">
             <div class="row">
                 <?php foreach ($this->model->Listar() as $r) : ?>
+                    <?php if ($r->idrol == 2) : ?>
                     <div class="col-lg-3 col-md-12">
                         <div class="card radius-15">
                             <div class="card-body text-center">
@@ -40,9 +41,12 @@
                             </div>
                         </div>
                     </div>
+                    <?php endif; ?>
                 <?php endforeach; ?>
             </div>
         </section>
+
+        <!-- Users Table Hidden -->
 
         <div hidden="hidden" class="row">
             <div class="col-lg-12">
@@ -61,7 +65,6 @@
                                         <th>Phone</th>
                                         <th></th>
                                         <th></th>
-                                        <!-- <th></th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
