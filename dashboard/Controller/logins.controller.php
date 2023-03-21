@@ -42,7 +42,7 @@ class LoginsController
         $alm->idrol = $_REQUEST['idrol'];
         $alm->email = $_REQUEST['email'];
         $alm->phone = $_REQUEST['phone'];
-      
+
 
         // SI ID Support ES MAYOR QUE CERO (0) INDICA QUE ES UNA ACTUALIZACIÓN DE ESA TUPLA EN LA TABLA Support, SINO SIGNIFICA QUE ES UN NUEVO REGISTRO
 
@@ -89,9 +89,7 @@ class LoginsController
         $alm->password = $_REQUEST['password'];
 
         $this->model->PasswordChange($alm);
-        
+
         header('Location: ?c=Logins');
     }
-
-    
 }
