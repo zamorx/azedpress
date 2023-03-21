@@ -89,7 +89,7 @@ class LoginsController
         $alm->password = $_REQUEST['password'];
 
         $this->model->PasswordChange($alm);
-
+        
         header('Location: ?c=Logins');
     }
 
