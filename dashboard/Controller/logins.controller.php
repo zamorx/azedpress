@@ -31,6 +31,19 @@ class LoginsController
         require_once 'View/footer.php';
     }
 
+    public function Packages()
+    {
+        $alm = new Logins();
+
+        if (isset($_REQUEST['uid'])) {
+            $alm = $this->model->getting($_REQUEST['uid']);
+        }
+
+        require_once 'View/header.php';
+        require_once 'View/logins-packages.php';
+        require_once 'View/footer.php';
+    }
+
     public function Guardar()
     {
         $alm = new Logins();
