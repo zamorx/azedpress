@@ -33,7 +33,7 @@
                                     <h2 class="mb-0 mt-5"><a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>"><?php echo $r->name; ?></a></h5>
                                         <p class="mb-3"><?php echo $r->namerol; ?></p>
                                         <div class="list-inline contacts-social mt-3 mb-3">
-                                            <a href="mailto:<?php echo $r->email; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bx-mail-send"></i>Contact Me</a>
+                                            <a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bx-edit-alt"></i> Edit</a>
                                         </div>
                                         <div class="d-grid"> <a href="?c=Logins&a=PassWD&uid=<?php echo $r->uid; ?>" class="btn btn-outline-primary radius-5 px-4">Change Password</a>
                                         </div>

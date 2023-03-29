@@ -3100,6 +3100,9 @@ a > code {
 .bg-light-primary {
 	background-color: rgb(13 110 253 / .11)!important
 }
+.bg-light-secondary {
+	background-color: rgb(108 117 125 / .11)!important
+}
 .bg-light-success {
 	background-color: rgb(23 160 14 / .11)!important;
 }
@@ -3115,6 +3118,10 @@ a > code {
 
 .text-success {
   color: #17a00e!important;
+}
+
+.text-secondary {
+  color: #6c757d!important;
 }
 
 .rounded-pill2 {

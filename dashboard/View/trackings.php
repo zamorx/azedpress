@@ -92,7 +92,7 @@
                                                 <?php if ($r->courierid < 7) : ?>
                                                 <tr>
                                                     <td>
-                                                        <?php echo $r->name; ?></h6>
+                                                        <a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>"> <?php echo $r->name; ?></a>
 
                                                     </td>
                                                     <td>AZ<?php echo $r->trackingid; ?></td>
