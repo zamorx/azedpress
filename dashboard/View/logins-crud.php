@@ -28,7 +28,7 @@
                                             <p class="text-secondary mb-1"><?php echo $alm->namerol; ?></p>
                                             <p class="text-muted font-size-sm">Nicaragua</p>
                                             <button class="btn btn-primary radius-5 px-4">Follow</button>
-                                            <button class="btn btn-outline-primary radius-5 px-4">Message</button>
+                                            <a href="mailto:<?php echo $alm->email; ?>"><button class="btn btn-outline-primary radius-5 px-4">Message</button></a>
                                         </div>
                                     </div>
                                     <hr class="my-4">
@@ -133,29 +133,19 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <?php foreach ($this->model->Packages() as $r) : ?>
-                                        <?php if ($alm->username == $r->username) : ?>
-                                            <?php if ($r->statusid < 6) : ?>
-                                            <div class="card radius-5">
-                                                <div class="card-header">
-                                                    Tracking # AZ<?php echo $r->trackingid; ?>
+                                <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="d-flex align-items-center mb-3">Flujo de paqueteria</h5>
+                                            <p>Aereos</p>
+                                            <div class="progress mb-3 h-5">
+                                                <div class="progress-bar bg-success w-50" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
-                                                
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Entrega estimada <?php $origDate = "$r->estdate";
-                                                                                                $newDate = date("F d", strtotime($origDate));
-                                                                                                echo $newDate; ?></h5>
-                                                        <?php echo $r->description; ?>
-                                                        <p class="card-text"></p>
-                                                        <?php if ($r->statusid == 5) : ?>
-                                                            <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
-                                                        <?php endif; ?>
-                                                    </div>
-                                                
+                                            <p>Maritimos</p>
+                                            <div class="progress mb-3 h-5">
+                                                <div class="progress-bar bg-info w-50" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
-                                            <?php endif; ?>
-                                        <?php endif; ?>
-                                    <?php endforeach; ?>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

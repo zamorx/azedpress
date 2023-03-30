@@ -30,7 +30,7 @@
                             <div class="card-body text-center">
                                 <div class="p-4 border radius-15">
                                     <img src="assets/img/<?php echo $r->username; ?>.jpg" width="110" height="110" class="rounded-circle shadow" alt="">
-                                    <h2 class="mb-0 mt-5"><a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>"><?php echo $r->name; ?></a></h5>
+                                    <h2 class="mb-0 mt-5"><?php echo $r->name; ?></h5>
                                         <p class="mb-3"><?php echo $r->namerol; ?></p>
                                         <div class="list-inline contacts-social mt-3 mb-3">
                                             <a href="?c=Logins&a=Crud&uid=<?php echo $r->uid; ?>" class="list-inline-item bg-twitter text-black border-0"><i class="bx bx-edit-alt"></i> Edit</a>
