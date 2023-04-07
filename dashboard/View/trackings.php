@@ -39,7 +39,7 @@
                                                                         $newDate = date("F d", strtotime($origDate));
                                                                         echo $newDate; ?></h5>
                                 <?php echo $r->description; ?>
-                                <p class="card-text"></p>
+                                <p class="card-text"><?php echo $r->statusname; ?></p>
                                 <?php if ($r->statusid == 6) : ?>
                                     <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
                                 <?php endif; ?>
