@@ -1,1 +1,122 @@
 /* your styles go here */
+
+.status-card .pt-status-milestones {
+    margin: 18px auto 50px;
+}
+
+.status-card .pt-status-milestones {
+    margin: 14px auto 56px;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1142.5px;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    z-index: 1;
+    transform: translateX(calc(-50% + 20px / 2));
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-marker.active {
+    background-color: #1196AB;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    background-color: #E9E7E7;
+    border-radius: 50%;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+    z-index: 2;
+}
+
+.pt-status-milestone-marker.active {
+    background-color: #1A98FF!important;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-marker .pt-status-milestone-marker-check.active {
+    display: block;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-marker .pt-status-milestone-marker-check {
+    background-image: url(https://m.media-amazon.com/images/G/01/x-locale/cs/ship-track/pt2/milestone_checkmark_2x._V516143779_.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 60%;
+    width: 60%;
+    display: none;
+    transition-property: display;
+    transition-timing-function: ease-out;
+    z-index: 3;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-label.current-label {
+    font-weight: 700;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-label.active {
+    color: #0F1111;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-label {
+    /*font-size: 13px;*/
+    line-height: 19px;
+    margin-top: 14px;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-label {
+    /*font-size: 11px;*/
+    line-height: 1.465;
+    position: absolute;
+    margin-top: 10px;
+    top: 20px;
+    right: calc(20px / 2);
+    text-align: center;
+    transform: translateX(50%);
+    color: #565959;
+    /*font-size: 12px;*/
+    line-height: 1.255;
+    transition-property: color,font-weight;
+    transition-timing-function: ease-out;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-bar {
+    position: relative;
+    height: 8px;
+    flex: 1;
+    margin-left: -1px;
+    margin-right: -5px;
+    background-color: #E9E7E7;
+    z-index: -1;
+    outline: 0;
+}
+
+.pt-status-milestone-bar-progress {
+    background-color: #1A98FF!important;
+}
+
+.status-card .pt-status-milestones .pt-status-milestone .pt-status-milestone-bar .pt-status-milestone-bar-progress {
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: -1px;
+    top: 0;
+    background-color: #1196AB;
+    transition: width;
+    transition-timing-function: linear;
+    border-radius: 0 4px 4px 0;
+    z-index: 0;
+    outline: 0;
+}

@@ -1,5 +1,3 @@
-
-
 <!-- Breadcrumb-->
 <div class="breadcrumb-holder">
     <div class="container-fluid">
@@ -29,7 +27,7 @@
 
             <?php foreach ($this->model->Listar() as $r) : ?>
                 <?php if ($userDetails->uid == $r->uid) : ?>
-                    <div class="card radius-5">
+                    <div class="card pt-card status-card radius-5">
                         <div class="card-header">
                             Tracking # AZ<?php echo $r->trackingid; ?>
                         </div>
@@ -41,30 +39,24 @@
                                 <?php echo $r->description; ?>
                             </div>
                             <div class="card-header">
-                                
+
                             </div>
                             <div class="card-body">
 
-                                <!-- BEGIN TEST-->
+                            <?php if ($r->statusid == 1) : ?>
+                                <div class="pt-status-milestones" aria-label="Delivery status: Ordered; Step 1 of 4."><div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100"><div class="pt-status-milestone-marker active" style="transition-duration: 250ms;"><div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div></div><div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Courier</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="38"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 690ms; width: 38%;"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Warehouse</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">para Entrega</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Delivered</div></div></div>
 
-                                <div class="pt-status-milestones" aria-label="Delivery status: Ordered; Step 1 of 4.">
-                                    <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
-                                        <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
-                                        <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;">
-                                    </div>
-                                </div>
-                                <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Courier</div>
-                            </div>
-                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="27">
-                                <div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 635ms; width: 27%;">
-                            </div>
-                        </div>
-                        <div class="pt-status-milestone-marker">
-                            <div class="pt-status-milestone-marker-check">
-                            </div>
-                        </div>
-                        <div class="pt-status-milestone-label" aria-hidden="true">Warehouse</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Listo para entrega</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Entregado</div></div></div>
+                            <?php endif; ?>
 
+                            <?php if ($r->statusid == 2) : ?>
+                                <div class="pt-status-milestones" aria-label="Delivery status: Shipped; Step 2 of 4."><div class="pt-status-milestone" data-reached="true" data-last-reached="false" data-percent-complete="100"><div class="pt-status-milestone-marker active" style="transition-duration: 250ms;"><div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div></div><div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">Courier</div></div><div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress" style="transition-duration: 500ms; width: 100%;"></div></div><div class="pt-status-milestone-marker active" style="transition-duration: 250ms;"><div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div></div><div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="30"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 30%;"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">para Entrega</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Entregado</div></div></div>
+
+                            <?php endif; ?>
+
+                            <?php if ($r->statusid == 5) : ?>
+                                para Entrega
+
+                            <?php endif; ?>
                             </div>
                         <?php endif; ?>
                         <?php if ($r->statusid == 6) : ?>
@@ -112,44 +104,44 @@
                                         <?php foreach ($this->model->Listar() as $r) : ?>
                                             <?php if ($r->statusid < 6) : ?>
                                                 <?php if ($r->courierid < 7) : ?>
-                                                <tr>
-                                                    <td>
-                                                        <a href="?c=Logins&a=Packages&uid=<?php echo $r->uid; ?>"> <?php echo $r->name; ?></a>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="?c=Logins&a=Packages&uid=<?php echo $r->uid; ?>"> <?php echo $r->name; ?></a>
 
-                                                    </td>
-                                                    <td>AZ<?php echo $r->trackingid; ?></td>
-                                                    <td>
-                                                    <?php if ($r->whtracking == null) : ?>
-                                                        <div data-toggle="tooltip" data-title="<?php echo $r->couriername; ?>" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
-                                                    <?php else : ?>
-                                                        <?php if ($r->whtracking == $r->couriertracking) : ?>
-                                                            <div data-toggle="tooltip" data-title="Atlantic Logistic" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                        </td>
+                                                        <td>AZ<?php echo $r->trackingid; ?></td>
+                                                        <td>
+                                                            <?php if ($r->whtracking == null) : ?>
+                                                                <div data-toggle="tooltip" data-title="<?php echo $r->couriername; ?>" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                             <?php else : ?>
-                                                                <div data-toggle="tooltip" data-title="Grupo Garza" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
-                                                            <?php endif; ?>
+                                                                <?php if ($r->whtracking == $r->couriertracking) : ?>
+                                                                    <div data-toggle="tooltip" data-title="Atlantic Logistic" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                                <?php else : ?>
+                                                                    <div data-toggle="tooltip" data-title="Grupo Garza" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                                <?php endif; ?>
 
-                                                    <?php endif; ?>
-                                                    </td>
-                                                    <td><?php echo $r->servicename; ?></td>
-                                                    <td><?php $newDate = date("F d, Y", strtotime($r->estdate));
-                                                        echo $newDate; ?>
-                                                    </td>
-                                                    
-                                                    <td>
-                                                        <?php if ($r->statusid < 5) : ?>
-                                                            <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-primary btn-sm radius-30 px-4">Editar</a>
-                                                        <?php endif; ?>
-                                                        <?php if ($r->statusid == 5) : ?>
-                                                            <a href="?c=Notify&a=Index&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-info btn-sm radius-30 px-4">Notificar</a>
-                                                        <?php endif; ?>
-                                                    </td>
-                                                    <td>
-                                                        <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
-                                                    </td>
+                                                            <?php endif; ?>
+                                                        </td>
+                                                        <td><?php echo $r->servicename; ?></td>
+                                                        <td><?php $newDate = date("F d, Y", strtotime($r->estdate));
+                                                            echo $newDate; ?>
+                                                        </td>
+
+                                                        <td>
+                                                            <?php if ($r->statusid < 5) : ?>
+                                                                <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-primary btn-sm radius-30 px-4">Editar</a>
+                                                            <?php endif; ?>
+                                                            <?php if ($r->statusid == 5) : ?>
+                                                                <a href="?c=Notify&a=Index&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-info btn-sm radius-30 px-4">Notificar</a>
+                                                            <?php endif; ?>
+                                                        </td>
+                                                        <td>
+                                                            <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
+                                                        </td>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endforeach; ?>
-                                                </tr>
+                                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -216,4 +208,3 @@
         $('[data-toggle="tooltip"]').popover()
     })
 </script>
-
