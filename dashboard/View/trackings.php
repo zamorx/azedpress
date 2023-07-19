@@ -39,10 +39,32 @@
                                                                         $newDate = date("F d", strtotime($origDate));
                                                                         echo $newDate; ?></h5>
                                 <?php echo $r->description; ?>
-                                <p class="card-text"><?php echo $r->statusname; ?></p>
-                                <?php if ($r->statusid == 6) : ?>
-                                    <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
-                                <?php endif; ?>
+                            </div>
+                            <div class="card-header">
+                                
+                            </div>
+                            <div class="card-body">
+
+                                <!-- BEGIN TEST-->
+
+                                <div class="pt-status-milestones" aria-label="Delivery status: Ordered; Step 1 of 4.">
+                                    <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
+                                        <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
+                                        <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;">
+                                    </div>
+                                </div>
+                                <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Courier</div>
+                            </div>
+                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="27">
+                                <div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 635ms; width: 27%;">
+                            </div>
+                        </div>
+                        <div class="pt-status-milestone-marker">
+                            <div class="pt-status-milestone-marker-check">
+                            </div>
+                        </div>
+                        <div class="pt-status-milestone-label" aria-hidden="true">Warehouse</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Listo para entrega</div></div><div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0"><div class="pt-status-milestone-bar"><div class="pt-status-milestone-bar-progress"></div></div><div class="pt-status-milestone-marker"><div class="pt-status-milestone-marker-check"></div></div><div class="pt-status-milestone-label" aria-hidden="true">Entregado</div></div></div>
+
                             </div>
                         <?php endif; ?>
                         <?php if ($r->statusid == 6) : ?>

@@ -39,7 +39,7 @@
                                 <?php foreach ($this->model->Packages() as $r) : ?>
                                     <?php if ($alm->username == $r->username) : ?>
                                         <?php if ($r->statusid < 6) : ?>
-                                            <div class="card radius-5">
+                                            <div class="card pt-card status-card radius-5">
                                                 <div class="card-header">
                                                     <?php if ($r->whtracking == null) : ?>
                                                         <h2 class="card-title"><?php echo $r->couriername; ?></h2>
