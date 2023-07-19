@@ -66,7 +66,7 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <a href="#" class="btn btn-outline-primary radius-5 px-4"><?php echo $r->statusname; ?></a><?php if ($r->statusid == 5) : ?>
-                                                        <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
+                                                        <a href="#" class="btn btn-primary radius-5 px-4">Peso: <?php echo $r->weight; ?> Lbs</a>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
