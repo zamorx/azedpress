@@ -33,9 +33,10 @@
                         </div>
                         <?php if ($r->statusid < 6) : ?>
                             <div class="card-body">
-                                <h5 class="card-title">Entrega estimada <?php $origDate = "$r->estdate";
-                                                                        $newDate = date("F d", strtotime($origDate));
-                                                                        echo $newDate; ?></h5>
+                                <h5 class="card-title">Entrega estimada
+                                    <?php $origDate = "$r->estdate";
+                                    $newDate = date("F d", strtotime($origDate));
+                                    echo $newDate; ?></h5>
                                 <?php echo $r->description; ?>
                             </div>
                             <div class="card-header">
@@ -163,9 +164,10 @@
                         <?php endif; ?>
                         <?php if ($r->statusid == 6) : ?>
                             <div class="card-body">
-                                <h5 class="card-title text-success"><?php echo $r->statusname; ?> <?php $origDate = "$r->deliverydate";
-                                                                                                    $newDate = date("F d, Y", strtotime($origDate));
-                                                                                                    echo $newDate; ?></h5>
+                                <h5 class="card-title text-success"><?php echo $r->statusname; ?>
+                                    <?php $origDate = "$r->deliverydate";
+                                    $newDate = date("F d, Y", strtotime($origDate));
+                                    echo $newDate; ?></h5>
                                 <?php echo $r->description; ?>
                                 <p class="card-text"></p>
                                 <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
