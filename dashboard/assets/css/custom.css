@@ -1,11 +1,11 @@
 /* your styles go here */
 
 .status-card .pt-status-milestones {
-    margin: 18px auto 50px;
+    margin: 18px auto 38px;
 }
 
 .status-card .pt-status-milestones {
-    margin: 14px auto 56px;
+    /*margin: 14px auto 56px;*/
     display: flex;
     flex: 1;
     flex-direction: row;
