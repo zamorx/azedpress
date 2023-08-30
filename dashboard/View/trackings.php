@@ -122,6 +122,84 @@
 
                                 <?php endif; ?>
 
+                                <?php if ($r->statusid == 3) : ?>
+                                    <div class="pt-status-milestones" aria-label="Delivery status: Shipped; Step 2 of 4.">
+                                        <div class="pt-status-milestone" data-reached="true" data-last-reached="false" data-percent-complete="100">
+                                            <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
+                                                <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">Courier</div>
+                                        </div>
+                                        <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
+                                            <div class="pt-status-milestone-bar">
+                                                <div class="pt-status-milestone-bar-progress" style="transition-duration: 500ms; width: 100%;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
+                                                <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                        </div>
+                                        <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="70">
+                                            <div class="pt-status-milestone-bar">
+                                                <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 70%;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-marker">
+                                                <div class="pt-status-milestone-marker-check"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">para Entrega</div>
+                                        </div>
+                                        <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
+                                            <div class="pt-status-milestone-bar">
+                                                <div class="pt-status-milestone-bar-progress"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-marker">
+                                                <div class="pt-status-milestone-marker-check"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">Entregado</div>
+                                        </div>
+                                    </div>
+
+                                <?php endif; ?>
+
+                                <?php if ($r->statusid == 4) : ?>
+                                    <div class="pt-status-milestones" aria-label="Delivery status: Shipped; Step 2 of 4.">
+                                        <div class="pt-status-milestone" data-reached="true" data-last-reached="false" data-percent-complete="100">
+                                            <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
+                                                <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">Courier</div>
+                                        </div>
+                                        <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
+                                            <div class="pt-status-milestone-bar">
+                                                <div class="pt-status-milestone-bar-progress" style="transition-duration: 500ms; width: 100%;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
+                                                <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                        </div>
+                                        <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="90">
+                                            <div class="pt-status-milestone-bar">
+                                                <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 90%;"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-marker">
+                                                <div class="pt-status-milestone-marker-check"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">para Entrega</div>
+                                        </div>
+                                        <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
+                                            <div class="pt-status-milestone-bar">
+                                                <div class="pt-status-milestone-bar-progress"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-marker">
+                                                <div class="pt-status-milestone-marker-check"></div>
+                                            </div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">Entregado</div>
+                                        </div>
+                                    </div>
+
+                                <?php endif; ?>
+
                                 <?php if ($r->statusid == 5) : ?>
                                     <div class="pt-status-milestones" aria-label="Delivery status: Out for delivery; Step 3 of 4.">
                                         <div class="pt-status-milestone" data-reached="true" data-last-reached="false" data-percent-complete="100">
