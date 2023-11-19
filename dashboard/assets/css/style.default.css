@@ -2756,6 +2756,10 @@ a.bg-dark:focus, a.bg-dark:hover {
   border-color: #343a40 !important;
 }
 
+.text-shipped {
+  color: #343a40 !important;
+}
+
 .text-primary {
   color: #ec5512 !important;
 }
@@ -3095,6 +3099,10 @@ a > code {
   .no-print{
       display:none;
   }
+}
+
+.bg-light-shipped {
+	background-color: rgb(52 58 64 / .11)!important
 }
 
 .bg-light-primary {
