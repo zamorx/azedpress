@@ -54,8 +54,6 @@
                                 <input type="hidden" name="whdate" value="<?php echo $alm->whdate; ?>"/>
                                 <input type="hidden" name="whtracking" value="<?php echo $alm->whtracking; ?>" />
                             </div>
-
- 
                         <?php endif; ?>
 
                         <?php if($alm->statusid == 3 ) : ?>

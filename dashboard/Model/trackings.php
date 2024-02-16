@@ -118,7 +118,7 @@ class Trackings
 		try 
 		{
 			$stm = $this->pdo
-			          ->prepare("SELECT * FROM tbltrackings,  tbllogins, tblstatus, tblservices, tblcouriers WHERE tbltrackings.uid =  tbllogins.uid AND tbltrackings.statusid = tblstatus.statusid AND tbltrackings.serviceid = tblservices.serviceid AND tbltrackings.courierid = tblcouriers.courierid AND trackingid = ?");
+			          ->prepare("SELECT * FROM tbltrackings, tbllogins, tblstatus, tblservices, tblcouriers WHERE tbltrackings.uid = tbllogins.uid AND tbltrackings.statusid = tblstatus.statusid AND tbltrackings.serviceid = tblservices.serviceid AND tbltrackings.courierid = tblcouriers.courierid AND trackingid = ?");
 			          
 
 			$stm->execute(array($trackingid));

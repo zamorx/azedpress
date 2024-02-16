@@ -301,7 +301,6 @@
                                                                 <?php else : ?>
                                                                     <div data-toggle="tooltip" data-title="Grupo Garza" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                                 <?php endif; ?>
-
                                                             <?php endif; ?>
                                                         </td>
                                                         <td><?php echo $r->servicename; ?></td>
