@@ -46,10 +46,12 @@
                                                         <div class="right-column">Tracking # <?php echo $r->couriertracking; ?></div>
                                                     <?php else : ?>
                                                         <?php if ($r->whtracking == $r->couriertracking) : ?>
-                                                            <h2 class="card-title">Atlantic Logistic</h2>
+                                                            <h2 class="card-title"><?php echo $r->couriername; ?></h2>
+                                                            <!--<h2 class="card-title">Atlantic Logistic</h2>-->
                                                             <div class="right-column">Tracking # <?php echo $r->couriertracking; ?></div>
                                                         <?php else : ?>
-                                                            <h2 class="card-title">Grupo Garza</h2>
+                                                            <h2 class="card-title"><?php echo $r->couriername; ?></h2>
+                                                            <!--<h2 class="card-title">Grupo Garza</h2>-->
                                                             <div class="right-column">Tracking # <?php echo $r->whtracking; ?></div>
                                                         <?php endif; ?>
                                                     <?php endif; ?>
