@@ -128,9 +128,9 @@
                                                                 </div>
                                                                 <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
                                                             </div>
-                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="30">
+                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="1">
                                                                 <div class="pt-status-milestone-bar">
-                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 30%;"></div>
+                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 1%;"></div>
                                                                 </div>
                                                                 <div class="pt-status-milestone-marker">
                                                                     <div class="pt-status-milestone-marker-check"></div>
@@ -167,9 +167,9 @@
                                                                 </div>
                                                                 <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
                                                             </div>
-                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="70">
+                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="55">
                                                                 <div class="pt-status-milestone-bar">
-                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 70%;"></div>
+                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 55%;"></div>
                                                                 </div>
                                                                 <div class="pt-status-milestone-marker">
                                                                     <div class="pt-status-milestone-marker-check"></div>
@@ -204,20 +204,20 @@
                                                                 <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
                                                                     <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                                                 </div>
-                                                                <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                                                <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
                                                             </div>
-                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="90">
+                                                            <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
                                                                 <div class="pt-status-milestone-bar">
-                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 650ms; width: 90%;"></div>
+                                                                    <div class="pt-status-milestone-bar-progress" style="transition-duration: 500ms; width: 100%;"></div>
                                                                 </div>
-                                                                <div class="pt-status-milestone-marker">
-                                                                    <div class="pt-status-milestone-marker-check"></div>
+                                                                <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
+                                                                    <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                                                 </div>
-                                                                <div class="pt-status-milestone-label" aria-hidden="true">para Entrega</div>
+                                                                <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">en Aduanas</div>
                                                             </div>
-                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
+                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="2">
                                                                 <div class="pt-status-milestone-bar">
-                                                                    <div class="pt-status-milestone-bar-progress"></div>
+                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 720ms; width: 2%;"></div>
                                                                 </div>
                                                                 <div class="pt-status-milestone-marker">
                                                                     <div class="pt-status-milestone-marker-check"></div>
@@ -254,9 +254,9 @@
                                                                 </div>
                                                                 <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">para Entrega</div>
                                                             </div>
-                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="44">
+                                                            <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="35">
                                                                 <div class="pt-status-milestone-bar">
-                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 720ms; width: 44%;"></div>
+                                                                    <div class="pt-status-milestone-bar-progress" style="transition-timing-function: ease-out; transition-duration: 720ms; width: 35%;"></div>
                                                                 </div>
                                                                 <div class="pt-status-milestone-marker">
                                                                     <div class="pt-status-milestone-marker-check"></div>
