@@ -59,7 +59,7 @@
                                             <div class="pt-status-milestone-marker">
                                                 <div class="pt-status-milestone-marker-check"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label" aria-hidden="true">Warehouse</div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">WHS Florida</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
                                             <div class="pt-status-milestone-bar">
@@ -98,7 +98,7 @@
                                             <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
                                                 <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">WHS Florida</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="1">
                                             <div class="pt-status-milestone-bar">
@@ -137,7 +137,7 @@
                                             <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
                                                 <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">WHS Florida</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="55">
                                             <div class="pt-status-milestone-bar">
@@ -176,7 +176,7 @@
                                             <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
                                                 <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                            <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">WHS Florida</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
                                             <div class="pt-status-milestone-bar">
@@ -215,7 +215,7 @@
                                             <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
                                                 <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">Warehouse</div>
+                                            <div class="pt-status-milestone-label active" aria-hidden="true" style="transition-duration: 250ms;">WHS Florida</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="true" data-last-reached="true" data-percent-complete="100">
                                             <div class="pt-status-milestone-bar">
@@ -297,9 +297,9 @@
                                                                 <div data-toggle="tooltip" data-title="<?php echo $r->couriername; ?>" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                             <?php else : ?>
                                                                 <?php if ($r->whtracking == $r->couriertracking) : ?>
-                                                                    <div data-toggle="tooltip" data-title="Atlantic Logistic" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                                    <div data-toggle="tooltip" data-title="JMS EXPRESS" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                                 <?php else : ?>
-                                                                    <div data-toggle="tooltip" data-title="Grupo Garza" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                                    <div data-toggle="tooltip" data-title="JMS EXPRESS" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                                 <?php endif; ?>
                                                             <?php endif; ?>
                                                         </td>
@@ -345,7 +345,7 @@
                                             <th>Tracking ID</th>
                                             <th>Estado</th>
                                             <th>Servicio</th>
-                                            <th>Warehouse</th>
+                                            <th>WHS Florida</th>
                                             <th>Delivered</th>
                                         </tr>
                                     </thead>
