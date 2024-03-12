@@ -68,7 +68,7 @@
                                             <div class="pt-status-milestone-marker">
                                                 <div class="pt-status-milestone-marker-check"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label" aria-hidden="true">Aduana</div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">Nicaragua</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
                                             <div class="pt-status-milestone-bar">
@@ -107,7 +107,7 @@
                                             <div class="pt-status-milestone-marker">
                                                 <div class="pt-status-milestone-marker-check"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label" aria-hidden="true">Aduana</div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">Nicaragua</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
                                             <div class="pt-status-milestone-bar">
@@ -146,7 +146,7 @@
                                             <div class="pt-status-milestone-marker">
                                                 <div class="pt-status-milestone-marker-check"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label" aria-hidden="true">Aduana</div>
+                                            <div class="pt-status-milestone-label" aria-hidden="true">Nicaragua</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="0">
                                             <div class="pt-status-milestone-bar">
@@ -185,7 +185,7 @@
                                             <div class="pt-status-milestone-marker active" style="transition-duration: 250ms;">
                                                 <div class="pt-status-milestone-marker-check active" style="transition-duration: 250ms;"></div>
                                             </div>
-                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">en Aduanas</div>
+                                            <div class="pt-status-milestone-label active current-label" aria-hidden="true" style="transition-duration: 250ms;">Nicaragua</div>
                                         </div>
                                         <div class="pt-status-milestone" data-reached="false" data-last-reached="false" data-percent-complete="1">
                                             <div class="pt-status-milestone-bar">
