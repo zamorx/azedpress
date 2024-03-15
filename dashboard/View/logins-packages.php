@@ -73,8 +73,12 @@
                                                 <div class="card-header">
                                                      <!-- BEGIN PESO -->
                                                      <?php if ($r->statusid > 1) : ?>
-                                                     <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
-                                                     <?php endif; ?>
+                                                        <?php if ($r->weight > 1) : ?>
+                                                            <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
+                                                        <?php else : ?>
+                                                            <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lb</h1>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
                                                      <!-- END PESO -->
                                                 </div>
                                                 <div class="card-body">
