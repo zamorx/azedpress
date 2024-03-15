@@ -65,10 +65,15 @@
                                                         ?>
                                                     </h5>
                                                     <?php echo $r->description; ?>
+                                                    
+
                                                 </div>
+                                                
 
                                                 <div class="card-header">
-
+                                                     <!-- BEGIN PESO -->
+                                                     Peso<h1><?php echo $r->weight;?> lbs</h1>
+                                                     <!-- END PESO -->
                                                 </div>
                                                 <div class="card-body">
 
