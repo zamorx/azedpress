@@ -40,7 +40,15 @@
                                 <?php echo $r->description; ?>
                             </div>
                             <div class="card-header">
-
+                                 <!-- BEGIN PESO -->
+                                 <?php if ($r->statusid == 5) : ?>
+                                    <?php if ($r->weight > 1) : ?>
+                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
+                                    <?php else : ?>
+                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lb</h1>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                                <!-- END PESO -->
                             </div>
                             <div class="card-body">
 
@@ -248,7 +256,44 @@
                                     echo $newDate; ?></h5>
                                 <?php echo $r->description; ?>
                                 <p class="card-text"></p>
-                                <a href="#" class="btn btn-primary radius-5 px-4">Factura</a>
+                                <!-- BEGIN PESO -->
+                                <?php if ($r->statusid == 6) : ?>
+                                    <?php if ($r->weight > 1) : ?>
+                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
+                                    <?php else : ?>
+                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lb</h1>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                                <!-- END PESO -->
+
+                                <!-- BEGIN MODAL DETAILS -->
+
+                             <a href="#" data-toggle="modal" data-target="#details" class="btn btn-primary radius-5 mt-3 px-4">Ver detalles</a>
+                                
+
+                                <div id="details" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true" class="modal fade text-left">
+                    <div role="document" class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 id="exampleModalLabel" class="modal-title">Detalles de entrega</h5>
+                          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                        </div>
+                        <div class="modal-body">
+                          <p>Lorem ipsum dolor sit amet consectetur.</p>
+                          <?php echo $r->servicename;?> 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- END MODAL DETAILS -->
+
+
+
                             </div>
                         <?php endif; ?>
                     </div>
