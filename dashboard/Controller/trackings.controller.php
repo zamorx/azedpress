@@ -52,11 +52,12 @@ class TrackingsController
 
         //EL CÓDIGO ANTERIOR ES EQUIVALENTE A UTILIZAR CONDICIONALES IF, TAL COMO SE MUESTRA EN EL COMENTARIO A CONTINUACIÓN:
 
-        /*if ($alm->trackingid > 0 ) {
+       /* if ($alm->trackingid > 0 ) {
             $this->model->Actualizar($alm);
         }
+       
         else{
-           $this->model->Registrar($alm); 
+            $this->model->Registrar($alm); 
         }*/
 
         header('Location: ?c=trackings');

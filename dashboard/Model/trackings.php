@@ -15,6 +15,7 @@ class Trackings
 	public $serviceid;
 	public $weight;
 	public $statusid;
+	public $resultDuplicate;
 
 	public function __CONSTRUCT()
 	{
@@ -206,26 +207,40 @@ class Trackings
 
 	public function Registrar($data)
 	{
-		try 
-		{
-		$sql = "INSERT INTO `tbltrackings` (uid,couriertracking,estdate,courierid,description,serviceid,weight,statusid,activetracking) 
-		        VALUES (?, ?, ?, ?, ?, ?, ?, 1, 1)";
+		try {
 
-		$this->pdo->prepare($sql)
-		     ->execute(
-				array(
-                    $data->uid,
-					$data->couriertracking,
-					$data->estdate,
-					$data->courierid,
-					$data->description,
-					$data->serviceid,
-                    $data->weight
-                )
-			);
-		} catch (Exception $e) 
-		{
-			die($e->getMessage());
+		$stm = $this->pdo->prepare("SELECT * FROM tbltrackings WHERE couriertracking = :couriertracking");
+		$stm->execute(array(':couriertracking' => $data->couriertracking));
+		$duplicateTracking = $stm->fetch(PDO::FETCH_ASSOC);
+		
+		if ($duplicateTracking) {
+			//Tracking duplicado
+			return false;
 		}
+		else {
+
+			$sql = "INSERT INTO `tbltrackings` (uid,couriertracking,estdate,courierid,description,serviceid,weight,statusid,activetracking) 
+					VALUES (?, ?, ?, ?, ?, ?, ?, 1, 1)";
+
+			$this->pdo->prepare($sql)
+				->execute(
+					array(
+						$data->uid,
+						$data->couriertracking,
+						$data->estdate,
+						$data->courierid,
+						$data->description,
+						$data->serviceid,
+						$data->weight
+					)
+				);
+			} 
+			return true;
+		}
+
+		catch (Exception $e) 
+			{
+				echo $e->getMessage();
+			}	
 	}
 }

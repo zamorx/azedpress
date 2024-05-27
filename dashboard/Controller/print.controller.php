@@ -8,12 +8,12 @@ class PrintController
 
     public function __CONSTRUCT()
     {
-        $this->model = new Invoices();
+        $this->model = new Trackings();
     }
 
     public function Index()
     {
-        $alm = new Invoices();
+        $alm = new Trackings();
 
         if (isset($_REQUEST['trackingid'])) {
             $alm = $this->model->getting($_REQUEST['trackingid']);
@@ -26,7 +26,7 @@ class PrintController
 
     public function InvoiceView()
     {
-        $alm = new Invoices();
+        $alm = new Trackings();
 
         if (isset($_REQUEST['trackingid'])) {
             $alm = $this->model->getting($_REQUEST['trackingid']);

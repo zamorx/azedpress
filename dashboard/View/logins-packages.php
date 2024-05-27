@@ -24,8 +24,8 @@
                                         <h1><?php echo $alm->uid != null ? $alm->name : 'Nuevo Registro'; ?></h1>
                                         <p class="text-secondary mb-1"><?php echo $alm->namerol; ?></p>
                                         <p class="text-muted font-size-sm">Nicaragua</p>
-                                        <button class="btn btn-primary radius-5 px-4">Follow</button>
-                                        <a href="mailto:<?php echo $alm->email; ?>"><button class="btn btn-outline-primary radius-5 px-4">Message</button></a>
+                                        <a target="blank" href="https://wa.me/+<?php echo $alm->phone; ?>"><button class="btn btn-primary radius-5 px-4">Message</button></a>
+                                        <a href="mailto:<?php echo $alm->email; ?>"><button class="btn btn-outline-primary radius-5 px-4">Email</button></a>
                                     </div>
                                 </div>
 
