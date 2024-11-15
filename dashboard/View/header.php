@@ -47,8 +47,6 @@ require_once('header-utils.php');
 
 <body>
 
-
-
     <body>
         <!-- Side Navbar -->
         <nav class="side-navbar">
@@ -104,7 +102,9 @@ require_once('header-utils.php');
                                                 <li><a rel="nofollow" href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="dropdown-item d-flex">
                                                         <div class="msg-profile"> <img src="assets/img/<?php echo $r->username; ?>.jpg" alt="<?php echo $r->username; ?>" class="img-fluid rounded-circle"></div>
                                                         <div class="msg-body">
-                                                            <h3 class="h5"><?php echo $r->name; ?></h3><span>Sent a new prealert</span><small>3 days ago at 7:58 pm - 10.06.2014</small>
+                                                            <h3 class="h5"><?php echo $r->name; ?></h3><span>Sent a new prealert</span><small>3 days ago at 7:58 pm - <?php $origDate = "$r->estdate";
+                                    $newDate = date("F d, Y", strtotime($origDate));
+                                    echo $newDate; ?></small>
                                                         </div>
                                                     </a></li>
                                             <?php endif; ?>

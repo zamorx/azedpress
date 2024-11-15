@@ -28,7 +28,7 @@
                             <div class="form-group">
                                 <label>Estado de paquete</label>
                                 <select id="statusid" name="statusid" value="<?php echo $alm->statusname; ?>" class="form-control">
-                                    <option value="<?php echo $alm->statusid; ?>"><?php echo $alm->statusid != null ? $alm->statusname : 'Seleccione un cliente'; ?></option>
+                                    
                                     <option value="2">en Warehouse</option>
                                 </select>
                             </div>
@@ -98,6 +98,19 @@
                             </div>
                             <input type="hidden" name="whdate" value="<?php echo $alm->whdate; ?>"/>
                             <input type="hidden" name="whtracking" value="<?php echo $alm->whtracking; ?>" />
+                        <?php endif; ?>
+
+                        <?php if($alm->statusid == 6 ) : ?>
+                            <div class="form-group">
+                                <label>Estado de paquete</label>
+                                <select id="statusid" name="statusid" value="<?php echo $alm->statusname; ?>" class="form-control">
+                                    <option value="7">Pagado</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="whdate" value="<?php echo $alm->whdate; ?>"/>
+                            <input type="hidden" name="whtracking" value="<?php echo $alm->whtracking; ?>" />
+
+ 
                         <?php endif; ?>
                            
                             
