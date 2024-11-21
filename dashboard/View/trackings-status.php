@@ -40,6 +40,10 @@
                                 <label>Fecha Warehouse</label>
                                 <input type="date" name="whdate" class="form-control" placeholder="Fecha de entrega en Warehouse" data-validacion-tipo="requerido|date" />
                             </div>
+                            <div class="form-group">
+                                <label>Peso</label>
+                                <input type="text" name="weight" class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|date" />
+                            </div>
                         <?php endif; ?>
 
                             
@@ -77,6 +81,11 @@
                                     <option value="<?php echo $alm->statusid; ?>"><?php echo $alm->statusid != null ? $alm->statusname : 'Seleccione un cliente'; ?></option>
                                     <option value="5">para Entrega</option>
                                 </select>
+                                
+                            </div>
+                            <div class="form-group">
+                                <label>Peso</label>
+                                <input type="text" name="weight" class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|date" />
                             </div>
                             <input type="hidden" name="whdate" value="<?php echo $alm->whdate; ?>"/>
                             <input type="hidden" name="whtracking" value="<?php echo $alm->whtracking; ?>" />

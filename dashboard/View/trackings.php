@@ -248,7 +248,7 @@
                                 <?php endif; ?>
                             </div>
                         <?php endif; ?>
-                        <?php if ($r->statusid == 7) : ?>
+                        <?php if ($r->statusid >= 6) : ?>
                             <div class="card-body">
                                 <h5 class="card-title text-success"><?php echo $r->statusname; ?>
                                     <?php $origDate = "$r->deliverydate";
@@ -257,7 +257,7 @@
                                 <?php echo $r->description; ?>
                                 <p class="card-text"></p>
                                 <!-- BEGIN PESO -->
-                                <?php if ($r->statusid == 7) : ?>
+                                <?php if ($r->statusid >= 6) : ?>
                                     <?php if ($r->weight > 1) : ?>
                                         <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
                                     <?php else : ?>

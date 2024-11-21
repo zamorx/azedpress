@@ -22,7 +22,7 @@ $(document).ready(function () {
             }
         },
         data: {
-            labels: ["Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", "Ene", "Feb", "Mar"],
+            labels: ["Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
             datasets: [
                 {
                     label: "Aéreo",
@@ -44,7 +44,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 0,
-                    data: [61, 29, 14, 15, 42, 25, 33, 90, 51, 27],
+                    data: [83, 10, 21, 18, 39, 6, 4, 3, 6, 5],
                     spanGaps: false
                 },
                 {
@@ -67,7 +67,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [88, 22, 16, 11, 23, 63, 12, 2, 0, 0],
+                    data: [31, 84, 33, 79, 30, 12, 60, 38, 130, 43],
                     spanGaps: false
                 }
             ]
@@ -83,13 +83,13 @@ $(document).ready(function () {
         type: 'doughnut',
         data: {
             labels: [
-                "Entregado",
-                "Warehouse",
-                "Para Entrega"
+                "Aereos",
+                "Maritimos",
+                "Entregados"
             ],
             datasets: [
                 {
-                    data: [74, 1, 1],
+                    data: [321, 93, 414],
                     borderWidth: [1, 1, 1],
                     backgroundColor: [
                         brandPrimary,

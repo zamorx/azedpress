@@ -91,6 +91,7 @@ class TrackingsController
         $alm->statusid = $_REQUEST['statusid'];
         $alm->whtracking = $_REQUEST['whtracking'];
         $alm->whdate = $_REQUEST['whdate'];
+        $alm->weight = $_REQUEST['weight'];
         $alm->deliverydate = $_REQUEST['deliverydate'];
 
         $this->model->StatusChange($alm);
