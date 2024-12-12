@@ -2471,6 +2471,9 @@ h5,
   font-size: 1rem;
 }
 
+h5.address {
+  text-transform:uppercase !important;}
+
 h6,
 .h6 {
   font-size: 0.9rem;

@@ -138,7 +138,7 @@
                             </div>
 
                             <div class="form-group">
-                                <input type="hidden" name="weight" value="Undefined" class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|min:8" />
+                                <input type="hidden" name="weight" value="0" class="form-control" placeholder="Peso del paquete" data-validacion-tipo="requerido|min:8" />
                             </div>
                             <div class="text-right">
                                 <a class="btn btn-danger radius-5 px-4" href="?c=Trackings">Cancel</a>

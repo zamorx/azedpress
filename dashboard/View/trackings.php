@@ -23,6 +23,27 @@
         <!-- BEGIN CLIENTS ORDERS -->
 
         <?php if ($userDetails->idrol == 2) : ?>
+            <div class="card pt-card status-card radius-5">
+                        <div class="card-header">
+                            Tu dirección de envío marítimo
+                        </div>
+                        
+                            <div class="card-body">
+                                <h5 class="address">Azedpress <?php echo $userDetails->username; ?> Mar</h5>
+                                8206 NW 30th Ter</br>Doral, FL 33122-1914</br>United States</br>Tel: (505) 8216-7715
+                            </div>
+                    </div>
+
+                    <div class="card pt-card status-card radius-5">
+                        <div class="card-header">
+                            Tu dirección de envío aéreo
+                        </div>
+                        
+                            <div class="card-body">
+                                <h5 class="address">Azedpress <?php echo $userDetails->username; ?> Aereo</h5>
+                                8206 NW 30th Ter</br>Doral, FL 33122-1914</br>United States</br>Tel: (505) 8216-7715
+                            </div>
+                    </div>
 
 
             <?php foreach ($this->model->Listar() as $r) : ?>
