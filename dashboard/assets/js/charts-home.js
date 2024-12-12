@@ -89,7 +89,7 @@ $(document).ready(function () {
             ],
             datasets: [
                 {
-                    data: [325, 98, 423],
+                    data: [325, 102, 427],
                     borderWidth: [1, 1, 1],
                     backgroundColor: [
                         brandPrimary,
