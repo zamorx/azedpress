@@ -378,10 +378,10 @@
                                                             <?php if ($r->statusid < 5) : ?>
                                                                 <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-primary btn-sm radius-30 px-4">Editar</a>
                                                             <?php endif; ?>
-                                                            <?php if ($r->statusid == 5) : ?>
+                                                            <?php if ($r->statusid == 6) : ?>
                                                                 <a href="?c=Notify&a=Index&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-info btn-sm radius-30 px-4">Notificar</a>
                                                             <?php endif; ?>
-                                                            <?php if ($r->statusid == 6) : ?>
+                                                            <?php if ($r->statusid == 5) : ?>
                                                                 <?php if ($r->serviceid == 1) : ?>
                                                                     <a href="#" class="btn btn-outline-info btn-sm radius-30 px-4">$<?php echo $r->weight*6 ?>.00</a>
                                                                 <?php elseif ($r->serviceid == 2) : ?>
@@ -390,9 +390,9 @@
                                                             <?php endif; ?>
                                                         </td>
                                                         <td>
-                                                            <?php if ($r->statusid < 6) : ?>
+                                                            <?php if ($r->statusid < 5) : ?>
                                                                 <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
-                                                            <?php elseif ($r->statusid == 6) : ?>
+                                                            <?php elseif ($r->statusid == 5) : ?>
                                                                 <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Pagar</a>
                                                             <?php endif; ?>
 

@@ -145,7 +145,7 @@
           <div class="number">1,138.88</div>
           <h3 class="h4 display">Social Users</h3>
           <div class="progress">
-            <div role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
+            <div role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
           </div>
           <div class="page-statistics d-flex justify-content-between">
             <div class="page-statistics-left"><span>Pages Visits</span><strong>857</strong></div>
