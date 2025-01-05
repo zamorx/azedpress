@@ -90,20 +90,9 @@
  
                         <?php endif; ?>
 
-                        <?php if($alm->statusid == 5 ) : ?>
-                            <div class="form-group">
-                                <label>Estado de paquete</label>
-                                <select id="statusid" name="statusid" value="<?php echo $alm->statusname; ?>" class="form-control">
-                                    <option value="7">Pagado</option>
-                                </select>
-                            </div>
-                            <input type="hidden" name="whdate" value="<?php echo $alm->whdate; ?>"/>
-                            <input type="hidden" name="whtracking" value="<?php echo $alm->whtracking; ?>" />
-                            <input type="hidden" name="weight" value="<?php echo $alm->weight; ?>"/>
- 
-                        <?php endif; ?>
+                       
 
-                        <?php if($alm->statusid == 6 ) : ?>
+                        <?php if($alm->statusid == 5 ) : ?>
                             <div class="form-group">
                                 <label>Estado de paquete</label>
                                 <select id="statusid" name="statusid" value="<?php echo $alm->statusname; ?>" class="form-control">

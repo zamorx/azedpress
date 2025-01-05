@@ -350,7 +350,7 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($this->model->Listar() as $r) : ?>
-                                            <?php if ($r->statusid < 7) : ?>
+                                            <?php if ($r->statusid < 6) : ?>
                                                 <?php if ($r->courierid < 7) : ?>
                                                     <tr>
                                                         <td>
@@ -363,9 +363,9 @@
                                                                 <div data-toggle="tooltip" data-title="<?php echo $r->couriername; ?>" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                             <?php else : ?>
                                                                 <?php if ($r->whtracking == $r->couriertracking) : ?>
-                                                                    <div data-toggle="tooltip" data-title="JMS EXPRESS" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                                    <div data-toggle="tooltip" data-title="AZEDPRESS" data-content="<?php echo $r->couriertracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                                 <?php else : ?>
-                                                                    <div data-toggle="tooltip" data-title="JMS EXPRESS" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+                                                                    <div data-toggle="tooltip" data-title="AZEDPRESS" data-content="<?php echo $r->whtracking; ?>" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
                                                                 <?php endif; ?>
                                                             <?php endif; ?>
                                                         </td>
@@ -375,13 +375,13 @@
                                                         </td>
 
                                                         <td>
-                                                            <?php if ($r->statusid < 5) : ?>
+                                                            <?php if ($r->statusid < 4) : ?>
                                                                 <a href="?c=Trackings&a=Crud&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-primary btn-sm radius-30 px-4">Editar</a>
                                                             <?php endif; ?>
-                                                            <?php if ($r->statusid == 6) : ?>
+                                                            <?php if ($r->statusid == 5) : ?>
                                                                 <a href="?c=Notify&a=Index&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-info btn-sm radius-30 px-4">Notificar</a>
                                                             <?php endif; ?>
-                                                            <?php if ($r->statusid == 5) : ?>
+                                                            <?php if ($r->statusid == 4) : ?>
                                                                 <?php if ($r->serviceid == 1) : ?>
                                                                     <a href="#" class="btn btn-outline-info btn-sm radius-30 px-4">$<?php echo $r->weight*6 ?>.00</a>
                                                                 <?php elseif ($r->serviceid == 2) : ?>
@@ -390,11 +390,9 @@
                                                             <?php endif; ?>
                                                         </td>
                                                         <td>
-                                                            <?php if ($r->statusid < 5) : ?>
+                                                            
                                                                 <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
-                                                            <?php elseif ($r->statusid == 5) : ?>
-                                                                <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Pagar</a>
-                                                            <?php endif; ?>
+                                                           
 
                                                         </td>
                                                     <?php endif; ?>
@@ -429,7 +427,7 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($this->model->Listar() as $r) : ?>
-                                            <?php if ($r->statusid == 7) : ?>
+                                            <?php if ($r->statusid == 6) : ?>
                                                 <tr>
                                                     <td>
                                                         <?php echo $r->name; ?></h6>
