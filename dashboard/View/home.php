@@ -142,13 +142,13 @@
         <!-- User Actibity-->
         <div class="card user-activity">
           <h2 class="display h4">User Activity</h2>
-          <div class="number">1,138.88</div>
-          <h3 class="h4 display">Social Users</h3>
+          <div class="number">1,194.88</div>
+          <h3 class="h4 display">Libras Aéreas</h3>
           <div class="progress">
             <div role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar bg-primary"></div>
           </div>
           <div class="page-statistics d-flex justify-content-between">
-            <div class="page-statistics-left"><span>Pages Visits</span><strong>857</strong></div>
+            <div class="page-statistics-left"><span>Libras Marítimas</span><strong>1,046.40</strong></div>
             <div class="page-statistics-right"><span>New Visits</span><strong>73.4%</strong></div>
           </div>
         </div>

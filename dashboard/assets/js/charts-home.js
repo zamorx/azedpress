@@ -44,7 +44,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 0,
-                    data: [6, 4, 3, 6, 9, 9],
+                    data: [6, 4, 3, 6, 9, 44],
                     spanGaps: false
                 },
                 {
@@ -67,7 +67,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [12, 60, 38, 130, 95, 69],
+                    data: [12, 60, 38, 130, 95, 90],
                     spanGaps: false
                 }
             ]
@@ -89,7 +89,7 @@ $(document).ready(function () {
             ],
             datasets: [
                 {
-                    data: [325, 102, 427],
+                    data: [335, 109, 444],
                     borderWidth: [1, 1, 1],
                     backgroundColor: [
                         brandPrimary,
