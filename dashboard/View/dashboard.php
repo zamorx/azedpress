@@ -22,18 +22,18 @@ $entrega = 0;
 <?php foreach ($this->model->trackingList() as $r) : ?>
   
     <?php if ($r->serviceid == 1) : ?>
-      <?php if ($r->statusid < 7) : ?>
+      <?php if ($r->statusid < 6) : ?>
           <?php $airpending++ ?>
-      <?php elseif ($r->statusid == 7) : ?>
+      <?php elseif ($r->statusid == 6) : ?>
         <?php $airdelivered++ ?>
         <?php $airearned = $airearned + ($r->weight * 2) ?>
         <?php $airincome = $airincome + $r->weight * 8 ?>
       <?php endif; ?> 
 
     <?php elseif ($r->serviceid == 2) : ?>
-        <?php if ($r->statusid < 7) : ?>
+        <?php if ($r->statusid < 6) : ?>
           <?php $marpending++ ?>
-        <?php elseif ($r->statusid == 7) : ?>
+        <?php elseif ($r->statusid == 6) : ?>
           <?php $mardelivered++ ?>
           <?php $marearned = $marearned + ($r->weight * 1) ?>
           <?php $marincome = $marincome + $r->weight * 3 ?>
