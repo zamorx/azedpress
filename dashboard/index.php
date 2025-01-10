@@ -1,6 +1,6 @@
 <?php
 require_once 'Model/dbconn.php';
-$controller = 'trackings';
+$controller = 'home';
 
 // Con esta sección hacemos el Controlador del Frontend
 if(!isset($_REQUEST['c']))
