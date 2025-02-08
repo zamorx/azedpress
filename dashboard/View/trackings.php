@@ -24,26 +24,26 @@
 
         <?php if ($userDetails->idrol == 2) : ?>
             <div class="card pt-card status-card radius-5">
-                        <div class="card-header">
-                            Tu dirección de envío marítimo
-                        </div>
-                        
-                            <div class="card-body">
-                                <h5 class="address">Azedpress <?php echo $userDetails->username; ?> Mar</h5>
-                                8206 NW 30th Ter</br>Doral, FL 33122-1914</br>United States</br>Tel: (505) 8216-7715
-                            </div>
-                    </div>
+                <div class="card-header">
+                    Tu dirección de envío marítimo
+                </div>
 
-                    <div class="card pt-card status-card radius-5">
-                        <div class="card-header">
-                            Tu dirección de envío aéreo
-                        </div>
-                        
-                            <div class="card-body">
-                                <h5 class="address">Azedpress <?php echo $userDetails->username; ?> Aereo</h5>
-                                8206 NW 30th Ter</br>Doral, FL 33122-1914</br>United States</br>Tel: (505) 8216-7715
-                            </div>
-                    </div>
+                <div class="card-body">
+                    <h5 class="address">Azedpress <?php echo $userDetails->username; ?> Mar</h5>
+                    8206 NW 30th Ter</br>Doral, FL 33122-1914</br>United States</br>Tel: (505) 8216-7715
+                </div>
+            </div>
+
+            <div class="card pt-card status-card radius-5">
+                <div class="card-header">
+                    Tu dirección de envío aéreo
+                </div>
+
+                <div class="card-body">
+                    <h5 class="address">Azedpress <?php echo $userDetails->username; ?> Aereo</h5>
+                    8206 NW 30th Ter</br>Doral, FL 33122-1914</br>United States</br>Tel: (505) 8216-7715
+                </div>
+            </div>
 
 
             <?php foreach ($this->model->Listar() as $r) : ?>
@@ -61,12 +61,12 @@
                                 <?php echo $r->description; ?>
                             </div>
                             <div class="card-header">
-                                 <!-- BEGIN PESO -->
-                                 <?php if ($r->statusid == 5) : ?>
+                                <!-- BEGIN PESO -->
+                                <?php if ($r->statusid == 5) : ?>
                                     <?php if ($r->weight > 1) : ?>
-                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
+                                        <?php echo $r->servicename; ?><h1><?php echo $r->weight; ?> lbs</h1>
                                     <?php else : ?>
-                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lb</h1>
+                                        <?php echo $r->servicename; ?><h1><?php echo $r->weight; ?> lb</h1>
                                     <?php endif; ?>
                                 <?php endif; ?>
                                 <!-- END PESO -->
@@ -280,38 +280,38 @@
                                 <!-- BEGIN PESO -->
                                 <?php if ($r->statusid >= 6) : ?>
                                     <?php if ($r->weight > 1) : ?>
-                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lbs</h1>
+                                        <?php echo $r->servicename; ?><h1><?php echo $r->weight; ?> lbs</h1>
                                     <?php else : ?>
-                                        <?php echo $r->servicename;?><h1><?php echo $r->weight;?> lb</h1>
+                                        <?php echo $r->servicename; ?><h1><?php echo $r->weight; ?> lb</h1>
                                     <?php endif; ?>
                                 <?php endif; ?>
                                 <!-- END PESO -->
 
                                 <!-- BEGIN MODAL DETAILS -->
 
-                             <a href="#" data-toggle="modal" data-target="#details" class="btn btn-primary radius-5 mt-3 px-4">Ver detalles</a>
-                                
+                                <a href="#" data-toggle="modal" data-target="#details" class="btn btn-primary radius-5 mt-3 px-4">Ver detalles</a>
+
 
                                 <div id="details" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel" aria-hidden="true" class="modal fade text-left">
-                    <div role="document" class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 id="exampleModalLabel" class="modal-title">Detalles de entrega</h5>
-                          <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
-                        </div>
-                        <div class="modal-body">
-                          <p>Lorem ipsum dolor sit amet consectetur.</p>
-                          <?php echo $r->servicename;?> 
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                         
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                                    <div role="document" class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 id="exampleModalLabel" class="modal-title">Detalles de entrega</h5>
+                                                <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                                <?php echo $r->servicename; ?>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Close</button>
 
-                  <!-- END MODAL DETAILS -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- END MODAL DETAILS -->
 
 
 
@@ -383,16 +383,16 @@
                                                             <?php endif; ?>
                                                             <?php if ($r->statusid == 4) : ?>
                                                                 <?php if ($r->serviceid == 1) : ?>
-                                                                    <a href="#" class="btn btn-outline-info btn-sm radius-30 px-4">$<?php echo $r->weight*6 ?>.00</a>
+                                                                    <a href="#" class="btn btn-outline-info btn-sm radius-30 px-4">$<?php echo $r->weight * 6 ?>.00</a>
                                                                 <?php elseif ($r->serviceid == 2) : ?>
-                                                                    <a href="#" class="btn btn-outline-info btn-sm radius-30 px-4">$<?php echo $r->weight*2 ?>.00</a>
+                                                                    <a href="#" class="btn btn-outline-info btn-sm radius-30 px-4">$<?php echo $r->weight * 2 ?>.00</a>
                                                                 <?php endif; ?>
                                                             <?php endif; ?>
                                                         </td>
                                                         <td>
-                                                            
-                                                                <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
-                                                           
+
+                                                            <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
+
 
                                                         </td>
                                                     <?php endif; ?>
@@ -458,124 +458,130 @@
 
         <!-- BEGIN TABLA JMS -->
 
-    
+
 
         <?php if ($userDetails->idrol == 3) : ?>
-            <section >
-    <div class="row">
-      <div class="col-lg-4 col-md-12">
-        <!-- Warehouse Widget          -->
-        <div id="new-updates" class="card updates recent-updated">
-          <div id="updates-header" class="card-header d-flex justify-content-between align-items-center">
-            <h2 class="h5 display"><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box">Warehouse</a></h2><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box"><i class="fa fa-angle-down"></i></a>
-          </div>
-          <div id="updates-box" role="tabpanel" class="collapse show">
-            <ul class="news list-unstyled">
-              <!-- Item-->
-              <?php foreach ($this->model->Listar() as $r) : ?>
-                <? if ($r->statusid == 2) : ?>
-                  <li class="d-flex justify-content-between">
-                    <div class="left-col d-flex">
-                      <div class="icon"><i class="icon-mail"></i></div>
-                      <div class="title"><strong><?php echo $r->name ?></strong>
-                        <p>Paquete entregado por <?php echo $r->couriername ?></p>
-                      </div>
-                    </div>
-                    <div class="right-col text-right">
-                      <div class="update-date">
-                        <?php $origDate = "$r->whdate"; $newDate = date("d", strtotime($origDate)); echo $newDate;?><span class="month">
-                        <?php $origDate = "$r->whdate"; $newDate = date("M", strtotime($origDate)); echo $newDate;?></span>
-                      </div>
-                    </div>
-                  </li>
-                <? endif ?>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-        </div>
-        <!-- Warehouse Widget End-->
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <!-- Recent Activities Widget      -->
-        <div id="recent-activities-wrapper" class="card updates activities">
-          <div id="activites-header" class="card-header d-flex justify-content-between align-items-center">
-            <h2 class="h5 display"><a data-toggle="collapse" data-parent="#recent-activities-wrapper" href="#activities-box" aria-expanded="true" aria-controls="activities-box">En camino</a></h2><a data-toggle="collapse" data-parent="#recent-activities-wrapper" href="#activities-box" aria-expanded="true" aria-controls="activities-box"><i class="fa fa-angle-down"></i></a>
-          </div>
-          <div id="activities-box" role="tabpanel" class="collapse show">
-            <ul class="activities list-unstyled">
-              <!-- Item-->
-              <?php foreach ($this->model->Listar() as $r) : ?>
-                <? if ($r->statusid == 3) : ?>
-              <li>
+            <section>
                 <div class="row">
-                  <div class="col-4 date-holder text-right">
-                    <div class="icon"><i class="icon-clock"></i></div>
-                    <div class="date"><span><?php echo $r->servicename ?></span><span class="text-info"> <?php $origDate = "$r->whdate"; $newDate = date("d M", strtotime($origDate)); echo $newDate;?></span></div>
-                  </div>
-                  <div class="col-8 content"><strong><?php echo $r->name ?></strong>
-                    <p><?php echo $r->whtracking ?></p>
-                  </div>
-                </div>
-              </li>
-              <?php endif ?>
-              <?php endforeach; ?> 
-              <!-- Item-->
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <!-- Para Entrega Widget-->
-        <div id="daily-feeds" class="card updates daily-feeds">
-          <div id="feeds-header" class="card-header d-flex justify-content-between align-items-center">
-            <h2 class="h5 display"><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box">Entregado - Pendiente de pago </a></h2>
-            <div class="right-column">
-              <a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box"><i class="fa fa-angle-down"></i></a>
-            </div>
-          </div>
-          <div id="feeds-box" role="tabpanel" class="collapse show">
-            <div class="feed-box">
-              <ul class="feed-elements list-unstyled">
-                <!-- List-->
-                <?php foreach ($this->model->Listar() as $r) : ?>
-                  <? if ($r->statusid == 5 || $r->statusid == 6 )  : ?>
-                    <? if ($r->serviceid == 1) : ?>
-                <li class="clearfix">
-                  <div class="feed d-flex justify-content-between">
-                    <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/<?php echo $r->username ?>.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                      <div class="content"><strong><?php echo $r->name ?></strong>
-                      <!--<small><?php echo $r->description ?></small>-->
-                        <div class="full-date"><small><?php echo $r->servicename ?> - <?php echo $r->whtracking ?></small></div>
-                      </div>
+                    <div class="col-lg-4 col-md-12">
+                        <!-- Warehouse Widget          -->
+                        <div id="new-updates" class="card updates recent-updated">
+                            <div id="updates-header" class="card-header d-flex justify-content-between align-items-center">
+                                <h2 class="h5 display"><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box">Warehouse</a></h2><a data-toggle="collapse" data-parent="#new-updates" href="#updates-box" aria-expanded="true" aria-controls="updates-box"><i class="fa fa-angle-down"></i></a>
+                            </div>
+                            <div id="updates-box" role="tabpanel" class="collapse show">
+                                <ul class="news list-unstyled">
+                                    <!-- Item-->
+                                    <?php foreach ($this->model->Listar() as $r) : ?>
+                                        <? if ($r->statusid == 2) : ?>
+                                            <li class="d-flex justify-content-between">
+                                                <div class="left-col d-flex">
+                                                    <div class="icon"><i class="icon-mail"></i></div>
+                                                    <div class="title"><strong><?php echo $r->name ?></strong>
+                                                        <p>Paquete entregado por <?php echo $r->couriername ?></p>
+                                                    </div>
+                                                </div>
+                                                <div class="right-col text-right">
+                                                    <div class="update-date">
+                                                        <?php $origDate = "$r->whdate";
+                                                        $newDate = date("d", strtotime($origDate));
+                                                        echo $newDate; ?><span class="month">
+                                                            <?php $origDate = "$r->whdate";
+                                                            $newDate = date("M", strtotime($origDate));
+                                                            echo $newDate; ?></span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <? endif ?>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Warehouse Widget End-->
                     </div>
-                    <div class="date"><small>$<?php echo $r->weight*6 ?></small></div>
-                  </div>
-                </li>
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Recent Activities Widget      -->
+                        <div id="recent-activities-wrapper" class="card updates activities">
+                            <div id="activites-header" class="card-header d-flex justify-content-between align-items-center">
+                                <h2 class="h5 display"><a data-toggle="collapse" data-parent="#recent-activities-wrapper" href="#activities-box" aria-expanded="true" aria-controls="activities-box">En camino</a></h2><a data-toggle="collapse" data-parent="#recent-activities-wrapper" href="#activities-box" aria-expanded="true" aria-controls="activities-box"><i class="fa fa-angle-down"></i></a>
+                            </div>
+                            <div id="activities-box" role="tabpanel" class="collapse show">
+                                <ul class="activities list-unstyled">
+                                    <!-- Item-->
+                                    <?php foreach ($this->model->Listar() as $r) : ?>
+                                        <? if ($r->statusid == 3) : ?>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-4 date-holder text-right">
+                                                        <div class="icon"><i class="icon-clock"></i></div>
+                                                        <div class="date"><span><?php echo $r->servicename ?></span><span class="text-info"> <?php $origDate = "$r->whdate";
+                                                                                                                                                $newDate = date("d M", strtotime($origDate));
+                                                                                                                                                echo $newDate; ?></span></div>
+                                                    </div>
+                                                    <div class="col-8 content"><strong><?php echo $r->name ?></strong>
+                                                        <p><?php echo $r->whtracking ?></p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        <?php endif ?>
+                                    <?php endforeach; ?>
+                                    <!-- Item-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <!-- Para Entrega Widget-->
+                        <div id="daily-feeds" class="card updates daily-feeds">
+                            <div id="feeds-header" class="card-header d-flex justify-content-between align-items-center">
+                                <h2 class="h5 display"><a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box">Entregado - Pendiente de pago </a></h2>
+                                <div class="right-column">
+                                    <a data-toggle="collapse" data-parent="#daily-feeds" href="#feeds-box" aria-expanded="true" aria-controls="feeds-box"><i class="fa fa-angle-down"></i></a>
+                                </div>
+                            </div>
+                            <div id="feeds-box" role="tabpanel" class="collapse show">
+                                <div class="feed-box">
+                                    <ul class="feed-elements list-unstyled">
+                                        <!-- List-->
+                                        <?php foreach ($this->model->Listar() as $r) : ?>
+                                            <? if ($r->statusid == 5 || $r->statusid == 6) : ?>
+                                                <? if ($r->serviceid == 1) : ?>
+                                                    <li class="clearfix">
+                                                        <div class="feed d-flex justify-content-between">
+                                                            <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/<?php echo $r->username ?>.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                                                                <div class="content"><strong><?php echo $r->name ?></strong>
+                                                                    <!--<small><?php echo $r->description ?></small>-->
+                                                                    <div class="full-date"><small><?php echo $r->servicename ?> - <?php echo $r->whtracking ?></small></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="date"><small>$<?php echo $r->weight * 6 ?></small></div>
+                                                        </div>
+                                                    </li>
 
-                <? elseif ($r->serviceid == 2) : ?>
-                <li class="clearfix">
-                  <div class="feed d-flex justify-content-between">
-                    <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/<?php echo $r->username ?>.jpg" alt="person" class="img-fluid rounded-circle"></a>
-                      <div class="content"><strong><?php echo $r->name ?></strong>
-                      <!--<small><?php echo $r->description ?></small>-->
-                        <div class="full-date"><small><?php echo $r->servicename ?> - <?php echo $r->whtracking ?></small></div>
-                      </div>
+                                                <? elseif ($r->serviceid == 2) : ?>
+                                                    <li class="clearfix">
+                                                        <div class="feed d-flex justify-content-between">
+                                                            <div class="feed-body d-flex justify-content-between"><a href="#" class="feed-profile"><img src="assets/img/<?php echo $r->username ?>.jpg" alt="person" class="img-fluid rounded-circle"></a>
+                                                                <div class="content"><strong><?php echo $r->name ?></strong>
+                                                                    <!--<small><?php echo $r->description ?></small>-->
+                                                                    <div class="full-date"><small><?php echo $r->servicename ?> - <?php echo $r->whtracking ?></small></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="date"><small>$<?php echo $r->weight * 2 ?></small></div>
+                                                        </div>
+                                                    </li>
+                                                <? endif ?>
+                                            <? endif ?>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Para Entrega Widget End-->
                     </div>
-                    <div class="date"><small>$<?php echo $r->weight*2 ?></small></div>
-                  </div>
-                </li>
-                <? endif ?>
-                <? endif ?>
-                <?php endforeach; ?> 
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- Para Entrega Widget End-->
-      </div>
-      
-    </div>
-</section>
+
+                </div>
+            </section>
             <div class="row">
                 <div class="col-lg-12">
 
@@ -592,9 +598,9 @@
                                             <th>Tracking ID</th>
                                             <th>Estado</th>
                                             <th>Servicio</th>
-                                            
+
                                             <th>Acciones</th>
-                                            
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -603,17 +609,17 @@
                                                 <?php if ($r->courierid < 7) : ?>
                                                     <tr>
                                                         <td>
-                                                         <?php echo $r->name; ?>
+                                                            <?php echo $r->name; ?>
 
                                                         </td>
                                                         <td><?php echo $r->couriertracking; ?></td>
                                                         <td>
-                                                            
-                                                                <div data-toggle="tooltip" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
-                                                           
+
+                                                            <div data-toggle="tooltip" class="badgex rounded-pill2 text-<?php echo $r->statuscode; ?> bg-light-<?php echo $r->statuscode; ?> p-21 text-uppercase px-50"><i class="bx bx-circle me-12"></i><?php echo $r->statusname; ?></div>
+
                                                         </td>
                                                         <td><?php echo $r->servicename; ?></td>
-                                                        
+
                                                         <td>
                                                             <a href="?c=Trackings&a=Status&trackingid=<?php echo $r->trackingid; ?>" class="btn btn-outline-info btn-sm radius-30 px-4">Estado</a>
                                                         </td>
@@ -625,7 +631,7 @@
                                 </table>
                             </div>
                         </div>
-                    </div>   
+                    </div>
                 </div>
             </div>
         <?php endif; ?>

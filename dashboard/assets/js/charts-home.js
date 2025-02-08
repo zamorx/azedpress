@@ -22,7 +22,7 @@ $(document).ready(function () {
             }
         },
         data: {
-            labels: ["Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            labels: ["Aug", "Sep", "Oct", "Nov", "Dec", "Jan"],
             datasets: [
                 {
                     label: "Aéreo",
@@ -44,7 +44,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 0,
-                    data: [6, 4, 3, 6, 9, 44],
+                    data: [4, 3, 6, 9, 44, 0],
                     spanGaps: false
                 },
                 {
@@ -67,7 +67,7 @@ $(document).ready(function () {
                     pointHoverBorderWidth: 2,
                     pointRadius: 1,
                     pointHitRadius: 10,
-                    data: [12, 60, 38, 130, 95, 90],
+                    data: [60, 38, 130, 95, 90, 34],
                     spanGaps: false
                 }
             ]
